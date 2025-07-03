@@ -1,72 +1,133 @@
 
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle, TrendingUp, Shield, Award } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-br from-blue-50 via-white to-blue-50 pt-12 pb-20">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Your Trusted
-                <span className="text-blue-600 block">Accounting</span>
-                Partner
-              </h2>
-              <p className="text-xl text-gray-600 leading-relaxed">
-                Professional accounting services tailored to your business needs. 
-                We help you navigate complex financial landscapes with confidence and clarity.
+    <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 pt-24 pb-20 overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-200/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-100/10 to-indigo-100/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
+          <div className="space-y-10">
+            {/* Trust Badge */}
+            <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-white/20">
+              <Award className="w-5 h-5 text-amber-500" />
+              <span className="text-sm font-semibold text-gray-700">CPA Certified • 15+ Years Excellence</span>
+            </div>
+
+            <div className="space-y-6">
+              <h1 className="text-6xl lg:text-7xl font-bold leading-tight">
+                <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                  Financial
+                </span>
+                <br />
+                <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                  Excellence
+                </span>
+                <br />
+                <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                  Delivered
+                </span>
+              </h1>
+              
+              <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
+                Transform your financial future with expert accounting services. We deliver 
+                strategic insights and precision that drives business growth and maximizes your wealth.
               </p>
             </div>
 
-            <div className="space-y-3">
+            {/* Key Benefits */}
+            <div className="grid grid-cols-1 gap-4">
               {[
-                "Comprehensive Tax Planning & Preparation",
-                "Expert Financial Statement Analysis",
-                "Personalized Business Consulting"
+                { icon: TrendingUp, text: "Strategic Tax Optimization & Wealth Planning" },
+                { icon: Shield, text: "Comprehensive Audit & Risk Management" },
+                { icon: CheckCircle, text: "Personalized Financial Advisory Services" }
               ].map((item, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                  <span className="text-gray-700">{item}</span>
+                <div key={index} className="flex items-center space-x-4 group">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-100 to-emerald-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <item.icon className="w-6 h-6 text-green-600" />
+                  </div>
+                  <span className="text-gray-700 font-medium">{item.text}</span>
                 </div>
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 pt-6">
               <Button 
                 size="lg" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg"
+                className="group bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1"
               >
-                Schedule Consultation
-                <ArrowRight className="w-5 h-5 ml-2" />
+                Start Free Consultation
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-10 py-4 rounded-xl font-semibold text-lg backdrop-blur-sm bg-white/50 hover:shadow-lg transition-all duration-300"
               >
-                Learn More
+                View Our Services
               </Button>
+            </div>
+
+            {/* Social Proof */}
+            <div className="flex items-center space-x-8 pt-8 border-t border-gray-200/50">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-gray-900">500+</div>
+                <div className="text-sm text-gray-600">Happy Clients</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-gray-900">$50M+</div>
+                <div className="text-sm text-gray-600">Managed Assets</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-gray-900">4.9★</div>
+                <div className="text-sm text-gray-600">Client Rating</div>
+              </div>
             </div>
           </div>
 
-          <div className="relative">
-            <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-3xl p-8 transform rotate-3 shadow-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
-                alt="Professional accounting consultation"
-                className="w-full h-80 object-cover rounded-2xl shadow-lg transform -rotate-3"
-              />
+          <div className="relative lg:pl-8">
+            {/* Main Image Container */}
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-indigo-600/20 rounded-3xl transform rotate-6 scale-105"></div>
+              <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:rotate-1 transition-transform duration-500">
+                <img 
+                  src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=800&q=80"
+                  alt="Professional financial consultation"
+                  className="w-full h-96 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-gray-100">
+
+            {/* Floating Elements */}
+            <div className="absolute -top-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 animate-float">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                  <CheckCircle className="w-6 h-6 text-green-600" />
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center">
+                  <TrendingUp className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900">CPA Certified</p>
-                  <p className="text-sm text-gray-600">Professional Excellence</p>
+                  <p className="font-bold text-gray-900">ROI Increased</p>
+                  <p className="text-2xl font-bold text-green-600">+245%</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 animate-float delay-1000">
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <p className="font-bold text-gray-900">Tax Savings</p>
+                  <p className="text-2xl font-bold text-blue-600">$125K+</p>
                 </div>
               </div>
             </div>
