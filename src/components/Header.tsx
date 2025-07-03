@@ -14,15 +14,11 @@ const Header = () => {
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2 hover:text-blue-600 transition-colors">
               <Phone className="w-3 h-3" />
-              <span>613-286-8946</span>
-            </div>
-            <div className="flex items-center space-x-2 hover:text-blue-600 transition-colors">
-              <Mail className="w-3 h-3" />
-              <span>pac613@pac613.ca</span>
+              <span>(613) 695-2955</span>
             </div>
             <div className="flex items-center space-x-2 hover:text-blue-600 transition-colors">
               <MapPin className="w-3 h-3" />
-              <span>Ottawa, ON</span>
+              <span>Suite 204, 78 George Street, Ottawa, ON</span>
             </div>
           </div>
         </div>
@@ -38,18 +34,18 @@ const Header = () => {
             </div>
             <div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-                PAC 613
+                PAC Consulting
               </h1>
-              <p className="text-sm text-gray-600 font-medium">Professional Accounting Corporation</p>
+              <p className="text-sm text-gray-600 font-medium">Accounting | Tax and Business Strategy</p>
             </div>
           </div>
           
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            {['Home', 'Services', 'About', 'Contact'].map((item) => (
+            {['Home', 'Services', 'Expert Blog', 'Contact'].map((item) => (
               <a
                 key={item}
-                href={`#${item.toLowerCase()}`}
+                href={`#${item.toLowerCase().replace(' ', '-')}`}
                 className="relative text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 group"
               >
                 {item}
@@ -60,7 +56,7 @@ const Header = () => {
 
           <div className="flex items-center space-x-4">
             <Button className="hidden lg:flex bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
-              Get Consultation
+              Get In Touch
             </Button>
             
             {/* Mobile menu button */}
@@ -77,10 +73,10 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-gray-100 animate-fade-in">
             <nav className="flex flex-col space-y-4">
-              {['Home', 'Services', 'About', 'Contact'].map((item) => (
+              {['Home', 'Services', 'Expert Blog', 'Contact'].map((item) => (
                 <a
                   key={item}
-                  href={`#${item.toLowerCase()}`}
+                  href={`#${item.toLowerCase().replace(' ', '-')}`}
                   className="text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -88,7 +84,7 @@ const Header = () => {
                 </a>
               ))}
               <Button className="mt-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-                Get Consultation
+                Get In Touch
               </Button>
             </nav>
           </div>

@@ -1,57 +1,41 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Calculator, FileText, TrendingUp, Users, Briefcase, PieChart, ArrowRight } from 'lucide-react';
+import { Calculator, FileText, TrendingUp, Users, Briefcase, PieChart, ArrowRight, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Services = () => {
   const services = [
     {
-      icon: Calculator,
-      title: "Tax Preparation",
-      description: "Professional tax preparation services for individuals and businesses. We ensure maximum deductions and compliance with all tax regulations.",
-      features: ["Personal Tax Returns", "Corporate Tax Returns", "Tax Planning", "CRA Representation"],
+      icon: TrendingUp,
+      title: "Business Strategy",
+      description: "As entrepreneurs we know what it takes to run a successful business. Our service offering includes; Business Strategy Planning, Tax Strategy Planning, Business Plans, Feasibility Studies, Human Resource Consulting and other general business advisory services.",
+      features: ["Business Planning", "Strategy Planning", "Feasibility Studies", "Tax Strategies"],
       color: "from-blue-500 to-cyan-500",
       bgColor: "from-blue-50 to-cyan-50"
     },
     {
-      icon: FileText,
-      title: "Bookkeeping Services",
-      description: "Comprehensive bookkeeping solutions to keep your financial records accurate and up-to-date for better business decision making.",
-      features: ["Monthly Bookkeeping", "Financial Statements", "Accounts Payable/Receivable", "Bank Reconciliation"],
+      icon: Calculator,
+      title: "Tax Services",
+      description: "Comprehensive tax services for businesses and individuals including corporate reorganizations, personal tax preparation, tax planning, and GST/HST filings.",
+      features: ["T2 Corporate tax returns", "T1 tax returns", "Corporate Reorganizations", "GST/HST filings"],
       color: "from-purple-500 to-indigo-500",
       bgColor: "from-purple-50 to-indigo-50"
     },
     {
-      icon: TrendingUp,
-      title: "Financial Planning",
-      description: "Strategic financial planning and advisory services to help you achieve your personal and business financial goals.",
-      features: ["Budget Planning", "Cash Flow Analysis", "Investment Advice", "Retirement Planning"],
+      icon: Globe,
+      title: "Cross Border Tax",
+      description: "Our cross border tax practice includes compliance certificates, withholding certificates, tax ID applications, and tax treaty exemption applications.",
+      features: ["CRA compliance certificates (T2062)", "IRS Withholding certificates (8288-B)", "US Tax ID applications (ITIN)", "Tax Treaty Exemption applications"],
       color: "from-emerald-500 to-teal-500",
       bgColor: "from-emerald-50 to-teal-50"
     },
     {
-      icon: Briefcase,
-      title: "Business Advisory",
-      description: "Expert business consulting services to help your business grow and succeed in today's competitive marketplace.",
-      features: ["Business Planning", "Performance Analysis", "Growth Strategies", "Risk Assessment"],
+      icon: FileText,
+      title: "Other Ancillary Services",
+      description: "Additional professional services to support your business needs including human resources, financing assistance, and incorporation services.",
+      features: ["Human Resource Consulting", "Capital/Debt Financing", "Incorporation Services", "Business Grants"],
       color: "from-orange-500 to-red-500",
       bgColor: "from-orange-50 to-red-50"
-    },
-    {
-      icon: Users,
-      title: "Payroll Services",
-      description: "Complete payroll management solutions ensuring accurate and timely payroll processing for your employees.",
-      features: ["Payroll Processing", "T4 Preparation", "ROE Preparation", "Payroll Tax Remittance"],
-      color: "from-pink-500 to-rose-500",
-      bgColor: "from-pink-50 to-rose-50"
-    },
-    {
-      icon: PieChart,
-      title: "Financial Statements",
-      description: "Professional preparation of financial statements including compilation, review, and audit services for your business.",
-      features: ["Compilation Engagements", "Review Engagements", "Audit Services", "Special Reports"],
-      color: "from-violet-500 to-purple-500",
-      bgColor: "from-violet-50 to-purple-50"
     }
   ];
 
@@ -75,16 +59,16 @@ const Services = () => {
             </span>
             <br />
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Accounting Solutions
+              Professional Services
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            We provide a full range of accounting and financial services to help individuals and 
-            businesses manage their finances effectively and achieve their goals.
+            We use our broad expertise and knowledge in the finance, technology and the legal landscape 
+            to help you execute on your business strategy needs.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
           {services.map((service, index) => (
             <Card 
               key={index} 
@@ -128,9 +112,9 @@ const Services = () => {
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-12 text-white">
           <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
-          <p className="text-xl mb-8 opacity-90">Contact us today for a free consultation and see how we can help your business succeed.</p>
+          <p className="text-xl mb-8 opacity-90">Contact us today and discover how our professional services can benefit your business.</p>
           <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-50 px-8 py-3 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300">
-            Contact Us Today
+            Get In Touch
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
         </div>

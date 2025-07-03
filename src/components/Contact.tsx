@@ -21,7 +21,7 @@ const Contact = () => {
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm text-white px-6 py-2 rounded-full font-semibold mb-6">
             <MessageSquare className="w-4 h-4" />
-            <span>Contact Us</span>
+            <span>Contact</span>
           </div>
           <h2 className="text-5xl lg:text-6xl font-bold mb-6 text-white">
             Get In Touch
@@ -31,8 +31,7 @@ const Contact = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Ready to take control of your finances? Contact us today for a free consultation 
-            and discover how our professional accounting services can benefit you.
+            Office visits are by appointment only. Please contact us anytime; our friendly and professional team is here to meet all your needs.
           </p>
         </div>
 
@@ -42,10 +41,10 @@ const Contact = () => {
             <Card className="border-0 shadow-2xl bg-white/95 backdrop-blur-sm">
               <CardHeader className="pb-8">
                 <CardTitle className="text-3xl font-bold text-gray-900 mb-2">
-                  Request a Consultation
+                  Get In Touch
                 </CardTitle>
                 <p className="text-gray-600 text-lg">
-                  Fill out the form below and we'll get back to you within 24 hours to discuss your accounting needs.
+                  Fill out the form below and we'll get back to you to discuss your needs.
                 </p>
               </CardHeader>
               <CardContent className="space-y-8">
@@ -95,7 +94,7 @@ const Contact = () => {
                 <div className="space-y-3">
                   <label className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Message *</label>
                   <Textarea 
-                    placeholder="Please describe your accounting needs or questions..." 
+                    placeholder="Please describe your needs or questions..." 
                     className="min-h-32 border-gray-200 focus:border-blue-500 focus:ring-blue-500/20 rounded-xl bg-gray-50 focus:bg-white transition-all duration-300 resize-none"
                   />
                 </div>
@@ -120,29 +119,22 @@ const Contact = () => {
                 {
                   icon: Phone,
                   title: "Call Us",
-                  primary: "613-286-8946",
-                  secondary: "Monday to Friday, 9:00 AM - 5:00 PM",
+                  primary: "(613) 695-2955",
+                  secondary: "Please contact us anytime",
                   color: "from-green-500 to-emerald-500"
-                },
-                {
-                  icon: Mail,
-                  title: "Email Us",
-                  primary: "pac613@pac613.ca",
-                  secondary: "We'll respond within 24 hours",
-                  color: "from-blue-500 to-cyan-500"
                 },
                 {
                   icon: MapPin,
                   title: "Our Location",
-                  primary: "Ottawa, Ontario",
-                  secondary: "Serving Ottawa and surrounding areas",
+                  primary: "Suite 204, 78 George Street",
+                  secondary: "Ottawa, ON",
                   color: "from-purple-500 to-indigo-500"
                 },
                 {
-                  icon: Clock,
-                  title: "Business Hours",
-                  primary: "Monday - Friday: 9:00 AM - 5:00 PM",
-                  secondary: "Weekend appointments available",
+                  icon: Calendar,
+                  title: "Office Visits",
+                  primary: "By Appointment Only",
+                  secondary: "Contact us to schedule",
                   color: "from-orange-500 to-red-500"
                 }
               ].map((item, index) => (
@@ -163,16 +155,16 @@ const Contact = () => {
               ))}
             </div>
 
-            {/* Emergency Contact */}
+            {/* Professional Services Card */}
             <Card className="border-0 shadow-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
               <CardContent className="p-8 text-center">
-                <Calendar className="w-12 h-12 mx-auto mb-4 text-white/90" />
-                <h4 className="font-bold text-xl mb-3">Need Immediate Help?</h4>
+                <MessageSquare className="w-12 h-12 mx-auto mb-4 text-white/90" />
+                <h4 className="font-bold text-xl mb-3">Professional Team</h4>
                 <p className="mb-6 text-white/90">
-                  For urgent accounting matters or tax deadlines, we offer priority consultation services.
+                  Our friendly and professional team is here to meet all your accounting and tax needs.
                 </p>
                 <Button className="w-full bg-white text-blue-600 hover:bg-gray-50 font-semibold rounded-xl">
-                  Priority Contact
+                  Contact Us Now
                 </Button>
               </CardContent>
             </Card>
