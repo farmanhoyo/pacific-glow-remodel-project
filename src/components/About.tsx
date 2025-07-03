@@ -4,17 +4,17 @@ import { Award, Users, Clock, Star, Trophy, Target, Briefcase, Globe } from 'luc
 
 const About = () => {
   const stats = [
-    { icon: Users, number: "500+", label: "Elite Clients", color: "from-blue-500 to-cyan-500" },
-    { icon: Clock, number: "15+", label: "Years Excellence", color: "from-purple-500 to-indigo-500" },
-    { icon: Award, number: "CPA", label: "Certified Experts", color: "from-emerald-500 to-teal-500" },
-    { icon: Star, number: "4.9", label: "Client Satisfaction", color: "from-amber-500 to-orange-500" }
+    { icon: Clock, number: "30+", label: "Years Experience", color: "from-blue-500 to-cyan-500" },
+    { icon: Users, number: "500+", label: "Satisfied Clients", color: "from-purple-500 to-indigo-500" },
+    { icon: Award, number: "CPA", label: "Certified Professional", color: "from-emerald-500 to-teal-500" },
+    { icon: Star, number: "100%", label: "Client Satisfaction", color: "from-amber-500 to-orange-500" }
   ];
 
   const achievements = [
-    { icon: Trophy, title: "Industry Leader", desc: "Top 1% of accounting firms in Ontario" },
-    { icon: Target, title: "Precision Focus", desc: "99.8% accuracy rate in tax filings" },
-    { icon: Briefcase, title: "Business Growth", desc: "Average 35% client revenue increase" },
-    { icon: Globe, title: "Global Reach", desc: "International tax expertise" }
+    { icon: Trophy, title: "Professional Excellence", desc: "CPA certified with 30+ years experience" },
+    { icon: Target, title: "Accurate Service", desc: "Precise and reliable accounting solutions" },
+    { icon: Briefcase, title: "Business Growth", desc: "Helping clients achieve financial success" },
+    { icon: Globe, title: "Local Expertise", desc: "Serving Ottawa and surrounding areas" }
   ];
 
   return (
@@ -34,35 +34,35 @@ const About = () => {
               
               <h2 className="text-5xl lg:text-6xl font-bold leading-tight">
                 <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-                  Financial
+                  Professional
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                  Excellence
+                  Accounting
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-                  Since 2008
+                  Since 1993
                 </span>
               </h2>
               
               <p className="text-xl text-gray-600 leading-relaxed">
-                PAC 613 represents the pinnacle of professional accounting services in the National Capital Region. 
-                Our team of certified experts combines deep technical expertise with innovative solutions to 
-                deliver exceptional results for our discerning clientele.
+                PAC 613 Professional Accounting Corporation has been providing comprehensive accounting 
+                and tax services to individuals and businesses in Ottawa and surrounding areas for over 30 years. 
+                Our commitment to excellence and personalized service has made us a trusted partner for all your financial needs.
               </p>
             </div>
 
             {/* Key Differentiators */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-gray-900">What Sets Us Apart</h3>
+              <h3 className="text-2xl font-bold text-gray-900">Why Choose PAC 613</h3>
               <div className="grid grid-cols-1 gap-4">
                 {[
-                  "Proprietary tax optimization strategies that maximize wealth",
-                  "White-glove service with dedicated account management",
-                  "Cutting-edge technology for real-time financial insights",
-                  "Proactive advisory approach focused on business growth",
-                  "Uncompromising commitment to confidentiality and integrity"
+                  "Over 30 years of professional accounting experience",
+                  "CPA certified and fully licensed professional",
+                  "Personalized service tailored to your specific needs",
+                  "Comprehensive range of accounting and tax services",
+                  "Committed to accuracy, integrity, and client satisfaction"
                 ].map((item, index) => (
                   <div key={index} className="flex items-start space-x-4 group">
                     <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mt-2 flex-shrink-0 group-hover:scale-125 transition-transform"></div>
@@ -91,14 +91,14 @@ const About = () => {
               <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1553484771-371a605b060b?auto=format&fit=crop&w=800&q=80"
-                  alt="Professional team at PAC 613"
+                  alt="Professional accounting team"
                   className="w-full h-80 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="bg-white/90 backdrop-blur-sm p-4 rounded-xl">
-                    <h4 className="font-bold text-gray-900 mb-1">Expert Team</h4>
-                    <p className="text-sm text-gray-600">CPA-certified professionals with 15+ years experience</p>
+                    <h4 className="font-bold text-gray-900 mb-1">Professional Service</h4>
+                    <p className="text-sm text-gray-600">Trusted accounting expertise since 1993</p>
                   </div>
                 </div>
               </div>
@@ -124,8 +124,8 @@ const About = () => {
             {/* Trust Badge */}
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white text-center shadow-xl">
               <Award className="w-12 h-12 mx-auto mb-4 text-yellow-300" />
-              <h4 className="text-2xl font-bold mb-2">Trusted by Industry Leaders</h4>
-              <p className="opacity-90">Serving Fortune 500 companies and high-net-worth individuals across Canada</p>
+              <h4 className="text-2xl font-bold mb-2">CPA Certified Professional</h4>
+              <p className="opacity-90">Licensed and certified to provide professional accounting services in Ontario</p>
             </div>
           </div>
         </div>

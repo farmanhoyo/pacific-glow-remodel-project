@@ -24,15 +24,15 @@ const Contact = () => {
             <span>Contact Us</span>
           </div>
           <h2 className="text-5xl lg:text-6xl font-bold mb-6 text-white">
-            Start Your Financial
+            Get In Touch
             <br />
             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Transformation
+              Today
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Ready to unlock your financial potential? Our expert team is standing by to provide 
-            personalized solutions that drive exceptional results.
+            Ready to take control of your finances? Contact us today for a free consultation 
+            and discover how our professional accounting services can benefit you.
           </p>
         </div>
 
@@ -42,10 +42,10 @@ const Contact = () => {
             <Card className="border-0 shadow-2xl bg-white/95 backdrop-blur-sm">
               <CardHeader className="pb-8">
                 <CardTitle className="text-3xl font-bold text-gray-900 mb-2">
-                  Schedule Your Consultation
+                  Request a Consultation
                 </CardTitle>
                 <p className="text-gray-600 text-lg">
-                  Fill out the form below and we'll get back to you within 24 hours with a personalized proposal.
+                  Fill out the form below and we'll get back to you within 24 hours to discuss your accounting needs.
                 </p>
               </CardHeader>
               <CardContent className="space-y-8">
@@ -71,42 +71,42 @@ const Contact = () => {
                     <label className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Email Address *</label>
                     <Input 
                       type="email" 
-                      placeholder="john@company.com" 
+                      placeholder="john@example.com" 
                       className="h-12 border-gray-200 focus:border-blue-500 focus:ring-blue-500/20 rounded-xl bg-gray-50 focus:bg-white transition-all duration-300" 
                     />
                   </div>
                   <div className="space-y-3">
                     <label className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Phone Number</label>
                     <Input 
-                      placeholder="(613) 555-0123" 
+                      placeholder="(613) 123-4567" 
                       className="h-12 border-gray-200 focus:border-blue-500 focus:ring-blue-500/20 rounded-xl bg-gray-50 focus:bg-white transition-all duration-300" 
                     />
                   </div>
                 </div>
 
                 <div className="space-y-3">
-                  <label className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Company Name</label>
+                  <label className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Subject</label>
                   <Input 
-                    placeholder="Your Company Inc." 
+                    placeholder="How can we help you?" 
                     className="h-12 border-gray-200 focus:border-blue-500 focus:ring-blue-500/20 rounded-xl bg-gray-50 focus:bg-white transition-all duration-300" 
                   />
                 </div>
 
                 <div className="space-y-3">
-                  <label className="text-sm font-semibold text-gray-700 uppercase tracking-wide">How Can We Help You? *</label>
+                  <label className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Message *</label>
                   <Textarea 
-                    placeholder="Tell us about your financial goals, challenges, or specific services you're interested in..." 
+                    placeholder="Please describe your accounting needs or questions..." 
                     className="min-h-32 border-gray-200 focus:border-blue-500 focus:ring-blue-500/20 rounded-xl bg-gray-50 focus:bg-white transition-all duration-300 resize-none"
                   />
                 </div>
 
                 <Button className="w-full h-14 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                  Send Message & Schedule Consultation
+                  Send Message
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
 
                 <p className="text-sm text-gray-500 text-center">
-                  * Required fields. Your information is secure and will never be shared.
+                  * Required fields. Your information is secure and confidential.
                 </p>
               </CardContent>
             </Card>
@@ -120,29 +120,29 @@ const Contact = () => {
                 {
                   icon: Phone,
                   title: "Call Us",
-                  primary: "(613) 555-0123",
-                  secondary: "Available Mon-Fri 9am-6pm EST",
+                  primary: "613-286-8946",
+                  secondary: "Monday to Friday, 9:00 AM - 5:00 PM",
                   color: "from-green-500 to-emerald-500"
                 },
                 {
                   icon: Mail,
                   title: "Email Us",
-                  primary: "info@pac613.ca",
-                  secondary: "Response within 4 hours",
+                  primary: "pac613@pac613.ca",
+                  secondary: "We'll respond within 24 hours",
                   color: "from-blue-500 to-cyan-500"
                 },
                 {
                   icon: MapPin,
-                  title: "Visit Us",
+                  title: "Our Location",
                   primary: "Ottawa, Ontario",
-                  secondary: "Serving National Capital Region",
+                  secondary: "Serving Ottawa and surrounding areas",
                   color: "from-purple-500 to-indigo-500"
                 },
                 {
                   icon: Clock,
                   title: "Business Hours",
-                  primary: "Mon-Fri: 9:00 AM - 6:00 PM",
-                  secondary: "Weekend consultations available",
+                  primary: "Monday - Friday: 9:00 AM - 5:00 PM",
+                  secondary: "Weekend appointments available",
                   color: "from-orange-500 to-red-500"
                 }
               ].map((item, index) => (
@@ -164,15 +164,15 @@ const Contact = () => {
             </div>
 
             {/* Emergency Contact */}
-            <Card className="border-0 shadow-xl bg-gradient-to-r from-red-500 to-pink-500 text-white">
+            <Card className="border-0 shadow-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
               <CardContent className="p-8 text-center">
                 <Calendar className="w-12 h-12 mx-auto mb-4 text-white/90" />
-                <h4 className="font-bold text-xl mb-3">Urgent Financial Matter?</h4>
+                <h4 className="font-bold text-xl mb-3">Need Immediate Help?</h4>
                 <p className="mb-6 text-white/90">
-                  For time-sensitive financial issues, we offer emergency consultation services.
+                  For urgent accounting matters or tax deadlines, we offer priority consultation services.
                 </p>
-                <Button className="w-full bg-white text-red-600 hover:bg-gray-50 font-semibold rounded-xl">
-                  Emergency Contact
+                <Button className="w-full bg-white text-blue-600 hover:bg-gray-50 font-semibold rounded-xl">
+                  Priority Contact
                 </Button>
               </CardContent>
             </Card>

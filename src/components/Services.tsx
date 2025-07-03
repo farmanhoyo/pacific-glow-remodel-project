@@ -1,55 +1,55 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Calculator, TrendingUp, Shield, Users, FileText, PieChart, ArrowRight } from 'lucide-react';
+import { Calculator, FileText, TrendingUp, Users, Briefcase, PieChart, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Services = () => {
   const services = [
     {
       icon: Calculator,
-      title: "Strategic Tax Planning",
-      description: "Maximize your wealth with sophisticated tax optimization strategies tailored to your unique financial situation.",
-      features: ["Advanced Tax Strategies", "Wealth Preservation", "Compliance Management"],
+      title: "Tax Preparation",
+      description: "Professional tax preparation services for individuals and businesses. We ensure maximum deductions and compliance with all tax regulations.",
+      features: ["Personal Tax Returns", "Corporate Tax Returns", "Tax Planning", "CRA Representation"],
       color: "from-blue-500 to-cyan-500",
       bgColor: "from-blue-50 to-cyan-50"
     },
     {
       icon: FileText,
-      title: "Financial Reporting",
-      description: "Comprehensive financial statements and analysis that provide deep insights into your business performance.",
-      features: ["Executive Dashboards", "Performance Analytics", "Regulatory Compliance"],
+      title: "Bookkeeping Services",
+      description: "Comprehensive bookkeeping solutions to keep your financial records accurate and up-to-date for better business decision making.",
+      features: ["Monthly Bookkeeping", "Financial Statements", "Accounts Payable/Receivable", "Bank Reconciliation"],
       color: "from-purple-500 to-indigo-500",
       bgColor: "from-purple-50 to-indigo-50"
     },
     {
       icon: TrendingUp,
-      title: "Investment Advisory",
-      description: "Strategic financial guidance to accelerate growth and optimize your investment portfolio performance.",
-      features: ["Portfolio Optimization", "Risk Assessment", "Growth Strategies"],
+      title: "Financial Planning",
+      description: "Strategic financial planning and advisory services to help you achieve your personal and business financial goals.",
+      features: ["Budget Planning", "Cash Flow Analysis", "Investment Advice", "Retirement Planning"],
       color: "from-emerald-500 to-teal-500",
       bgColor: "from-emerald-50 to-teal-50"
     },
     {
-      icon: Shield,
-      title: "Risk Management",
-      description: "Comprehensive audit and assurance services to protect your assets and ensure regulatory compliance.",
-      features: ["Financial Audits", "Risk Assessment", "Compliance Reviews"],
+      icon: Briefcase,
+      title: "Business Advisory",
+      description: "Expert business consulting services to help your business grow and succeed in today's competitive marketplace.",
+      features: ["Business Planning", "Performance Analysis", "Growth Strategies", "Risk Assessment"],
       color: "from-orange-500 to-red-500",
       bgColor: "from-orange-50 to-red-50"
     },
     {
       icon: Users,
-      title: "Payroll Excellence",
-      description: "Streamlined payroll solutions that ensure accuracy, compliance, and employee satisfaction.",
-      features: ["Automated Processing", "Benefits Management", "Tax Compliance"],
+      title: "Payroll Services",
+      description: "Complete payroll management solutions ensuring accurate and timely payroll processing for your employees.",
+      features: ["Payroll Processing", "T4 Preparation", "ROE Preparation", "Payroll Tax Remittance"],
       color: "from-pink-500 to-rose-500",
       bgColor: "from-pink-50 to-rose-50"
     },
     {
       icon: PieChart,
-      title: "Business Intelligence",
-      description: "Transform your data into actionable insights with advanced bookkeeping and financial analysis.",
-      features: ["Real-time Analytics", "Financial Forecasting", "Performance Metrics"],
+      title: "Financial Statements",
+      description: "Professional preparation of financial statements including compilation, review, and audit services for your business.",
+      features: ["Compilation Engagements", "Review Engagements", "Audit Services", "Special Reports"],
       color: "from-violet-500 to-purple-500",
       bgColor: "from-violet-50 to-purple-50"
     }
@@ -71,16 +71,16 @@ const Services = () => {
           </div>
           <h2 className="text-5xl lg:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-              Comprehensive Financial
+              Comprehensive
             </span>
             <br />
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Solutions
+              Accounting Solutions
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            From strategic tax planning to advanced financial analytics, our comprehensive suite of services 
-            is designed to accelerate your financial success and provide unmatched peace of mind.
+            We provide a full range of accounting and financial services to help individuals and 
+            businesses manage their finances effectively and achieve their goals.
           </p>
         </div>
 
@@ -127,10 +127,10 @@ const Services = () => {
 
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-12 text-white">
-          <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Finances?</h3>
-          <p className="text-xl mb-8 opacity-90">Schedule a free consultation and discover how we can accelerate your financial success.</p>
+          <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
+          <p className="text-xl mb-8 opacity-90">Contact us today for a free consultation and see how we can help your business succeed.</p>
           <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-50 px-8 py-3 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300">
-            Get Started Today
+            Contact Us Today
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
         </div>

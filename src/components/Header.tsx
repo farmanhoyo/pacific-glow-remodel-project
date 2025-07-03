@@ -14,11 +14,11 @@ const Header = () => {
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2 hover:text-blue-600 transition-colors">
               <Phone className="w-3 h-3" />
-              <span>(613) 555-0123</span>
+              <span>613-286-8946</span>
             </div>
             <div className="flex items-center space-x-2 hover:text-blue-600 transition-colors">
               <Mail className="w-3 h-3" />
-              <span>info@pac613.ca</span>
+              <span>pac613@pac613.ca</span>
             </div>
             <div className="flex items-center space-x-2 hover:text-blue-600 transition-colors">
               <MapPin className="w-3 h-3" />

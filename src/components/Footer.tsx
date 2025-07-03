@@ -34,14 +34,14 @@ const Footer = () => {
             </div>
             
             <p className="text-gray-300 leading-relaxed text-lg max-w-md">
-              Your premier partner for sophisticated financial solutions in the National Capital Region. 
-              We transform businesses through strategic accounting excellence and innovative financial advisory.
+              Providing comprehensive accounting, tax preparation, and business advisory services 
+              to individuals and businesses in Ottawa and surrounding areas since 1993.
             </p>
 
             {/* Newsletter Signup */}
             <div className="space-y-4">
-              <h4 className="text-xl font-bold text-white">Stay Informed</h4>
-              <p className="text-gray-400">Get exclusive financial insights and tax-saving strategies delivered monthly.</p>
+              <h4 className="text-xl font-bold text-white">Stay Updated</h4>
+              <p className="text-gray-400">Get the latest tax tips and financial insights delivered to your inbox.</p>
               <div className="flex space-x-3">
                 <Input 
                   placeholder="Enter your email" 
@@ -56,17 +56,17 @@ const Footer = () => {
 
           {/* Services */}
           <div className="space-y-8">
-            <h4 className="text-xl font-bold text-white border-b border-gray-700 pb-4">Premium Services</h4>
+            <h4 className="text-xl font-bold text-white border-b border-gray-700 pb-4">Our Services</h4>
             <ul className="space-y-4">
               {[
-                "Strategic Tax Planning",
-                "Investment Advisory",
-                "Financial Reporting",
-                "Risk Management",
-                "Business Intelligence",
-                "Payroll Excellence",
-                "Audit & Assurance",
-                "Wealth Management"
+                "Tax Preparation",
+                "Bookkeeping Services",
+                "Financial Planning",
+                "Business Advisory",
+                "Payroll Services",
+                "Financial Statements",
+                "CRA Representation",
+                "Business Consulting"
               ].map((service, index) => (
                 <li key={index}>
                   <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center space-x-2 group">
@@ -88,9 +88,9 @@ const Footer = () => {
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h5 className="font-semibold text-white mb-1">Call Us</h5>
-                  <p className="text-gray-300">(613) 555-0123</p>
-                  <p className="text-sm text-gray-400">Mon-Fri 9am-6pm EST</p>
+                  <h5 className="font-semibold text-white mb-1">Phone</h5>
+                  <p className="text-gray-300">613-286-8946</p>
+                  <p className="text-sm text-gray-400">Mon-Fri 9am-5pm</p>
                 </div>
               </div>
 
@@ -99,9 +99,9 @@ const Footer = () => {
                   <Mail className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h5 className="font-semibold text-white mb-1">Email Us</h5>
-                  <p className="text-gray-300">info@pac613.ca</p>
-                  <p className="text-sm text-gray-400">Response within 4 hours</p>
+                  <h5 className="font-semibold text-white mb-1">Email</h5>
+                  <p className="text-gray-300">pac613@pac613.ca</p>
+                  <p className="text-sm text-gray-400">Response within 24 hours</p>
                 </div>
               </div>
 
@@ -112,7 +112,7 @@ const Footer = () => {
                 <div>
                   <h5 className="font-semibold text-white mb-1">Location</h5>
                   <p className="text-gray-300">Ottawa, Ontario</p>
-                  <p className="text-sm text-gray-400">National Capital Region</p>
+                  <p className="text-sm text-gray-400">Serving surrounding areas</p>
                 </div>
               </div>
             </div>
@@ -149,14 +149,14 @@ const Footer = () => {
               <div className="flex space-x-6 text-sm">
                 <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Privacy Policy</a>
                 <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Terms of Service</a>
-                <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Cookie Policy</a>
+                <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Contact</a>
               </div>
             </div>
             
             <div className="flex items-center space-x-2 text-sm text-gray-400">
-              <span>Certified by</span>
-              <div className="px-3 py-1 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full text-white font-semibold text-xs">
-                CPA CANADA
+              <span>Licensed by</span>
+              <div className="px-3 py-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full text-white font-semibold text-xs">
+                CPA ONTARIO
               </div>
             </div>
           </div>

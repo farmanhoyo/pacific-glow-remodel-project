@@ -18,36 +18,36 @@ const Hero = () => {
             {/* Trust Badge */}
             <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-white/20">
               <Award className="w-5 h-5 text-amber-500" />
-              <span className="text-sm font-semibold text-gray-700">CPA Certified • 15+ Years Excellence</span>
+              <span className="text-sm font-semibold text-gray-700">CPA Certified • Trusted Since 1993</span>
             </div>
 
             <div className="space-y-6">
               <h1 className="text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
-                  Financial
+                  Professional
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                  Excellence
+                  Accounting
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
-                  Delivered
+                  Services
                 </span>
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
-                Transform your financial future with expert accounting services. We deliver 
-                strategic insights and precision that drives business growth and maximizes your wealth.
+                Providing comprehensive accounting, tax preparation, and business advisory services 
+                to individuals and businesses in Ottawa and surrounding areas.
               </p>
             </div>
 
             {/* Key Benefits */}
             <div className="grid grid-cols-1 gap-4">
               {[
-                { icon: TrendingUp, text: "Strategic Tax Optimization & Wealth Planning" },
-                { icon: Shield, text: "Comprehensive Audit & Risk Management" },
-                { icon: CheckCircle, text: "Personalized Financial Advisory Services" }
+                { icon: TrendingUp, text: "Tax Preparation & Planning Services" },
+                { icon: Shield, text: "Bookkeeping & Financial Statement Preparation" },
+                { icon: CheckCircle, text: "Business Advisory & Consulting Services" }
               ].map((item, index) => (
                 <div key={index} className="flex items-center space-x-4 group">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-100 to-emerald-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -64,7 +64,7 @@ const Hero = () => {
                 size="lg" 
                 className="group bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1"
               >
-                Start Free Consultation
+                Contact Us Today
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button 
@@ -79,16 +79,16 @@ const Hero = () => {
             {/* Social Proof */}
             <div className="flex items-center space-x-8 pt-8 border-t border-gray-200/50">
               <div className="text-center">
+                <div className="text-3xl font-bold text-gray-900">30+</div>
+                <div className="text-sm text-gray-600">Years Experience</div>
+              </div>
+              <div className="text-center">
                 <div className="text-3xl font-bold text-gray-900">500+</div>
-                <div className="text-sm text-gray-600">Happy Clients</div>
+                <div className="text-sm text-gray-600">Satisfied Clients</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-gray-900">$50M+</div>
-                <div className="text-sm text-gray-600">Managed Assets</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-gray-900">4.9★</div>
-                <div className="text-sm text-gray-600">Client Rating</div>
+                <div className="text-3xl font-bold text-gray-900">CPA</div>
+                <div className="text-sm text-gray-600">Certified</div>
               </div>
             </div>
           </div>
@@ -100,7 +100,7 @@ const Hero = () => {
               <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:rotate-1 transition-transform duration-500">
                 <img 
                   src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=800&q=80"
-                  alt="Professional financial consultation"
+                  alt="Professional accounting services"
                   className="w-full h-96 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
@@ -114,8 +114,8 @@ const Hero = () => {
                   <TrendingUp className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <p className="font-bold text-gray-900">ROI Increased</p>
-                  <p className="text-2xl font-bold text-green-600">+245%</p>
+                  <p className="font-bold text-gray-900">Tax Savings</p>
+                  <p className="text-2xl font-bold text-green-600">Maximized</p>
                 </div>
               </div>
             </div>
@@ -126,8 +126,8 @@ const Hero = () => {
                   <Shield className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <p className="font-bold text-gray-900">Tax Savings</p>
-                  <p className="text-2xl font-bold text-blue-600">$125K+</p>
+                  <p className="font-bold text-gray-900">CPA Certified</p>
+                  <p className="text-2xl font-bold text-blue-600">Professional</p>
                 </div>
               </div>
             </div>
