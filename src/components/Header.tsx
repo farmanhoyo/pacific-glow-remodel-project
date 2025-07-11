@@ -6,6 +6,10 @@ import { Button } from '@/components/ui/button';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleGetInTouch = () => {
+    window.location.href = 'mailto:info@pac613.ca';
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-100/50 shadow-sm">
       <div className="container mx-auto px-4">
@@ -15,6 +19,10 @@ const Header = () => {
             <div className="flex items-center space-x-2 hover:text-blue-600 transition-colors">
               <Phone className="w-3 h-3" />
               <span>(613) 695-2955</span>
+            </div>
+            <div className="flex items-center space-x-2 hover:text-blue-600 transition-colors">
+              <Mail className="w-3 h-3" />
+              <span>info@pac613.ca</span>
             </div>
             <div className="flex items-center space-x-2 hover:text-blue-600 transition-colors">
               <MapPin className="w-3 h-3" />
@@ -55,7 +63,10 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Button className="hidden lg:flex bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+            <Button 
+              onClick={handleGetInTouch}
+              className="hidden lg:flex bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+            >
               Get In Touch
             </Button>
             
@@ -83,7 +94,10 @@ const Header = () => {
                   {item}
                 </a>
               ))}
-              <Button className="mt-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+              <Button 
+                onClick={handleGetInTouch}
+                className="mt-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white"
+              >
                 Get In Touch
               </Button>
             </nav>

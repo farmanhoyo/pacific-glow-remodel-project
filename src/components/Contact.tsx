@@ -6,6 +6,11 @@ import { Textarea } from '@/components/ui/textarea';
 import { Phone, Mail, MapPin, Clock, Calendar, MessageSquare, ArrowRight } from 'lucide-react';
 
 const Contact = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    window.location.href = 'mailto:info@pac613.ca';
+  };
+
   return (
     <section className="py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 relative overflow-hidden">
       {/* Background Elements */}
@@ -48,61 +53,67 @@ const Contact = () => {
                 </p>
               </CardHeader>
               <CardContent className="space-y-8">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-3">
-                    <label className="text-sm font-semibold text-gray-700 uppercase tracking-wide">First Name *</label>
-                    <Input 
-                      placeholder="John" 
-                      className="h-12 border-gray-200 focus:border-blue-500 focus:ring-blue-500/20 rounded-xl bg-gray-50 focus:bg-white transition-all duration-300" 
-                    />
+                <form onSubmit={handleSubmit} className="space-y-8">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-3">
+                      <label className="text-sm font-semibold text-gray-700 uppercase tracking-wide">First Name *</label>
+                      <Input 
+                        placeholder="John" 
+                        required
+                        className="h-12 border-gray-200 focus:border-blue-500 focus:ring-blue-500/20 rounded-xl bg-gray-50 focus:bg-white transition-all duration-300" 
+                      />
+                    </div>
+                    <div className="space-y-3">
+                      <label className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Last Name *</label>
+                      <Input 
+                        placeholder="Doe" 
+                        required
+                        className="h-12 border-gray-200 focus:border-blue-500 focus:ring-blue-500/20 rounded-xl bg-gray-50 focus:bg-white transition-all duration-300" 
+                      />
+                    </div>
                   </div>
-                  <div className="space-y-3">
-                    <label className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Last Name *</label>
-                    <Input 
-                      placeholder="Doe" 
-                      className="h-12 border-gray-200 focus:border-blue-500 focus:ring-blue-500/20 rounded-xl bg-gray-50 focus:bg-white transition-all duration-300" 
-                    />
+                  
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-3">
+                      <label className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Email Address *</label>
+                      <Input 
+                        type="email" 
+                        placeholder="john@example.com" 
+                        required
+                        className="h-12 border-gray-200 focus:border-blue-500 focus:ring-blue-500/20 rounded-xl bg-gray-50 focus:bg-white transition-all duration-300" 
+                      />
+                    </div>
+                    <div className="space-y-3">
+                      <label className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Phone Number</label>
+                      <Input 
+                        placeholder="(613) 123-4567" 
+                        className="h-12 border-gray-200 focus:border-blue-500 focus:ring-blue-500/20 rounded-xl bg-gray-50 focus:bg-white transition-all duration-300" 
+                      />
+                    </div>
                   </div>
-                </div>
-                
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-3">
-                    <label className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Email Address *</label>
-                    <Input 
-                      type="email" 
-                      placeholder="john@example.com" 
-                      className="h-12 border-gray-200 focus:border-blue-500 focus:ring-blue-500/20 rounded-xl bg-gray-50 focus:bg-white transition-all duration-300" 
-                    />
-                  </div>
-                  <div className="space-y-3">
-                    <label className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Phone Number</label>
-                    <Input 
-                      placeholder="(613) 123-4567" 
-                      className="h-12 border-gray-200 focus:border-blue-500 focus:ring-blue-500/20 rounded-xl bg-gray-50 focus:bg-white transition-all duration-300" 
-                    />
-                  </div>
-                </div>
 
-                <div className="space-y-3">
-                  <label className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Subject</label>
-                  <Input 
-                    placeholder="How can we help you?" 
-                    className="h-12 border-gray-200 focus:border-blue-500 focus:ring-blue-500/20 rounded-xl bg-gray-50 focus:bg-white transition-all duration-300" 
-                  />
-                </div>
+                  <div className="space-y-3">
+                    <label className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Subject</label>
+                    <Input 
+                      placeholder="How can we help you?" 
+                      className="h-12 border-gray-200 focus:border-blue-500 focus:ring-blue-500/20 rounded-xl bg-gray-50 focus:bg-white transition-all duration-300" 
+                    />
+                  </div>
 
-                <div className="space-y-3">
-                  <label className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Message *</label>
-                  <Textarea 
-                    placeholder="Please describe your needs or questions..." 
-                    className="min-h-32 border-gray-200 focus:border-blue-500 focus:ring-blue-500/20 rounded-xl bg-gray-50 focus:bg-white transition-all duration-300 resize-none"
-                  />
-                </div>
+                  <div className="space-y-3">
+                    <label className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Message *</label>
+                    <Textarea 
+                      placeholder="Please describe your needs or questions..." 
+                      required
+                      className="min-h-32 border-gray-200 focus:border-blue-500 focus:ring-blue-500/20 rounded-xl bg-gray-50 focus:bg-white transition-all duration-300 resize-none"
+                    />
+                  </div>
 
-                <Button className="w-full h-14 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                  Send Message
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                  <Button type="submit" className="w-full h-14 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    Send Message
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </form>
 
                 <p className="text-sm text-gray-500 text-center">
                   * Required fields. Your information is secure and confidential.
@@ -122,6 +133,13 @@ const Contact = () => {
                   primary: "(613) 695-2955",
                   secondary: "Please contact us anytime",
                   color: "from-green-500 to-emerald-500"
+                },
+                {
+                  icon: Mail,
+                  title: "Email Us",
+                  primary: "info@pac613.ca",
+                  secondary: "We'll respond within 24 hours",
+                  color: "from-blue-500 to-indigo-500"
                 },
                 {
                   icon: MapPin,
@@ -163,7 +181,10 @@ const Contact = () => {
                 <p className="mb-6 text-white/90">
                   Our friendly and professional team is here to meet all your accounting and tax needs.
                 </p>
-                <Button className="w-full bg-white text-blue-600 hover:bg-gray-50 font-semibold rounded-xl">
+                <Button 
+                  onClick={() => window.location.href = 'mailto:info@pac613.ca'}
+                  className="w-full bg-white text-blue-600 hover:bg-gray-50 font-semibold rounded-xl"
+                >
                   Contact Us Now
                 </Button>
               </CardContent>
