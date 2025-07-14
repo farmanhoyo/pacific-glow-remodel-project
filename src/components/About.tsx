@@ -32,20 +32,6 @@ const About = () => {
                 <span>About PAC Consulting</span>
               </div>
               
-              <h2 className="text-5xl lg:text-6xl font-bold leading-tight">
-                <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-                  Professional
-                </span>
-                <br />
-                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                  Accounting &
-                </span>
-                <br />
-                <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-                  Tax Services
-                </span>
-              </h2>
-              
               <p className="text-xl text-gray-600 leading-relaxed">
                 As entrepreneurs we know what it takes to run a successful business. We use our broad expertise 
                 and knowledge in the finance, technology and the legal landscape to help you execute on your business strategy needs.
