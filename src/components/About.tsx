@@ -18,7 +18,7 @@ const About = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-white via-gray-50 to-blue-50/30 relative overflow-hidden">
+    <section id="about" className="py-24 bg-gradient-to-br from-white via-gray-50 to-blue-50/30 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-blue-200/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-200/10 rounded-full blur-3xl"></div>
@@ -53,7 +53,7 @@ const About = () => {
             </div>
 
             {/* Key Services */}
-            <div className="space-y-6">
+            <div id="expertise" className="space-y-6">
               <h3 className="text-2xl font-bold text-gray-900">Our Expertise</h3>
               <div className="grid grid-cols-1 gap-4">
                 {[

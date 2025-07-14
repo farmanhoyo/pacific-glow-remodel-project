@@ -76,7 +76,7 @@ const Header = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300 group-hover:w-full"></span>
             </button>
             <button
-              onClick={() => handleNavClick('about')}
+              onClick={() => handleNavClick('expertise')}
               className="relative text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 group"
             >
               About
@@ -126,7 +126,7 @@ const Header = () => {
                 Services
               </button>
               <button
-                onClick={() => handleNavClick('about')}
+                onClick={() => handleNavClick('expertise')}
                 className="text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors text-left"
               >
                 About
