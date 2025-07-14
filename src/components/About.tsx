@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from '@/components/ui/card';
 import { Award, Users, Clock, Star, Trophy, Target, Briefcase, Globe } from 'lucide-react';
 
@@ -17,7 +18,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="pt-48 pb-24 bg-gradient-to-br from-white via-gray-50 to-blue-50/30 relative overflow-hidden">
+    <section id="about" className="pt-32 pb-24 bg-gradient-to-br from-white via-gray-50 to-blue-50/30 relative overflow-hidden mt-20">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-blue-200/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-200/10 rounded-full blur-3xl"></div>

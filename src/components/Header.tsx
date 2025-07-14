@@ -1,4 +1,3 @@
-
 import { Phone, Mail, MapPin, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -16,13 +15,21 @@ const Header = () => {
   const handleNavClick = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      // Offset the scroll position to account for the header height
+      const headerHeight = 140; // Approximate header height
+      const elementPosition = section.offsetTop;
+      const offsetPosition = elementPosition - headerHeight;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
     setIsMenuOpen(false);
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-100/50 shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-100/50 shadow-sm">
       <div className="container mx-auto px-4">
         {/* Top contact bar */}
         <div className="hidden lg:flex items-center justify-end py-2 text-xs text-gray-600 border-b border-gray-100/30">
