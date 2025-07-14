@@ -7,7 +7,18 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleGetInTouch = () => {
-    window.location.href = 'mailto:info@pac613.ca';
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleNavClick = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
   };
 
   return (
@@ -50,16 +61,34 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            {['Home', 'Services', 'Expert Blog', 'Contact'].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase().replace(' ', '-')}`}
-                className="relative text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 group"
-              >
-                {item}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300 group-hover:w-full"></span>
-              </a>
-            ))}
+            <button
+              onClick={() => handleNavClick('hero')}
+              className="relative text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 group"
+            >
+              Home
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+            </button>
+            <button
+              onClick={() => handleNavClick('services')}
+              className="relative text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 group"
+            >
+              Services
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+            </button>
+            <button
+              onClick={() => handleNavClick('about')}
+              className="relative text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 group"
+            >
+              About
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+            </button>
+            <button
+              onClick={() => handleNavClick('contact')}
+              className="relative text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 group"
+            >
+              Contact
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+            </button>
           </nav>
 
           <div className="flex items-center space-x-4">
@@ -84,16 +113,30 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-gray-100 animate-fade-in">
             <nav className="flex flex-col space-y-4">
-              {['Home', 'Services', 'Expert Blog', 'Contact'].map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase().replace(' ', '-')}`}
-                  className="text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item}
-                </a>
-              ))}
+              <button
+                onClick={() => handleNavClick('hero')}
+                className="text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors text-left"
+              >
+                Home
+              </button>
+              <button
+                onClick={() => handleNavClick('services')}
+                className="text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors text-left"
+              >
+                Services
+              </button>
+              <button
+                onClick={() => handleNavClick('about')}
+                className="text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors text-left"
+              >
+                About
+              </button>
+              <button
+                onClick={() => handleNavClick('contact')}
+                className="text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors text-left"
+              >
+                Contact
+              </button>
               <Button 
                 onClick={handleGetInTouch}
                 className="mt-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white"

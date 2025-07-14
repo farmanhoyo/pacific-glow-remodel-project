@@ -1,10 +1,23 @@
-
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle, TrendingUp, Shield, Award } from 'lucide-react';
 
 const Hero = () => {
+  const handleGetInTouch = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleViewServices = () => {
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 pt-24 pb-20 overflow-hidden">
+    <section id="hero" className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 pt-24 pb-20 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl animate-pulse"></div>
@@ -60,6 +73,7 @@ const Hero = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 pt-6">
               <Button 
+                onClick={handleGetInTouch}
                 size="lg" 
                 className="group bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1"
               >
@@ -67,6 +81,7 @@ const Hero = () => {
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button 
+                onClick={handleViewServices}
                 variant="outline" 
                 size="lg"
                 className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-10 py-4 rounded-xl font-semibold text-lg backdrop-blur-sm bg-white/50 hover:shadow-lg transition-all duration-300"

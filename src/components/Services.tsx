@@ -1,9 +1,15 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Calculator, FileText, TrendingUp, Users, Briefcase, PieChart, ArrowRight, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Services = () => {
+  const handleGetInTouch = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const services = [
     {
       icon: TrendingUp,
@@ -40,7 +46,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section id="services" className="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -113,7 +119,11 @@ const Services = () => {
         <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-12 text-white">
           <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
           <p className="text-xl mb-8 opacity-90">Contact us today and discover how our professional services can benefit your business.</p>
-          <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-50 px-8 py-3 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300">
+          <Button 
+            onClick={handleGetInTouch}
+            size="lg" 
+            className="bg-white text-blue-600 hover:bg-gray-50 px-8 py-3 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+          >
             Get In Touch
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
