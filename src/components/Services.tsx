@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Calculator, FileText, TrendingUp, Users, Briefcase, PieChart, ArrowRight, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -46,7 +47,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section id="services" className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -54,12 +55,12 @@ const Services = () => {
         }}></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-full font-semibold mb-6">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="text-center mb-12 md:mb-20">
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 md:px-6 py-2 rounded-full font-semibold mb-4 md:mb-6 text-sm md:text-base">
             <span>Our Services</span>
           </div>
-          <h2 className="text-5xl lg:text-6xl font-bold mb-6">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
               Comprehensive
             </span>
@@ -68,13 +69,13 @@ const Services = () => {
               Professional Services
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
             We use our broad expertise and knowledge in the finance, technology and the legal landscape 
             to help you execute on your business strategy needs.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
           {services.map((service, index) => (
             <Card 
               key={index} 
@@ -83,30 +84,30 @@ const Services = () => {
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${service.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
               
-              <CardHeader className="relative z-10 pb-4">
-                <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                  <service.icon className="w-8 h-8 text-white" />
+              <CardHeader className="relative z-10 pb-4 p-4 md:p-6">
+                <div className={`w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                  <service.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl font-bold text-gray-900 group-hover:text-gray-800 transition-colors mb-3">
+                <CardTitle className="text-xl md:text-2xl font-bold text-gray-900 group-hover:text-gray-800 transition-colors mb-2 md:mb-3 leading-tight">
                   {service.title}
                 </CardTitle>
               </CardHeader>
               
-              <CardContent className="relative z-10 space-y-6">
-                <p className="text-gray-600 leading-relaxed text-lg">
+              <CardContent className="relative z-10 space-y-4 md:space-y-6 p-4 md:p-6 pt-0">
+                <p className="text-gray-600 leading-relaxed text-base md:text-lg">
                   {service.description}
                 </p>
                 
-                <div className="space-y-3">
+                <div className="space-y-2 md:space-y-3">
                   {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center space-x-3">
-                      <div className={`w-2 h-2 bg-gradient-to-r ${service.color} rounded-full`}></div>
-                      <span className="text-gray-700 font-medium">{feature}</span>
+                    <div key={idx} className="flex items-start space-x-3">
+                      <div className={`w-2 h-2 bg-gradient-to-r ${service.color} rounded-full flex-shrink-0 mt-2`}></div>
+                      <span className="text-gray-700 font-medium text-sm md:text-base leading-relaxed">{feature}</span>
                     </div>
                   ))}
                 </div>
 
-                <Button variant="ghost" className="group/btn mt-6 p-0 h-auto text-gray-700 hover:text-blue-600 font-semibold">
+                <Button variant="ghost" className="group/btn mt-4 md:mt-6 p-0 h-auto text-gray-700 hover:text-blue-600 font-semibold text-sm md:text-base">
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                 </Button>
@@ -116,16 +117,16 @@ const Services = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-12 text-white">
-          <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
-          <p className="text-xl mb-8 opacity-90">Contact us today and discover how our professional services can benefit your business.</p>
+        <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl md:rounded-3xl p-8 md:p-12 text-white mx-4 md:mx-0">
+          <h3 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4">Ready to Get Started?</h3>
+          <p className="text-lg md:text-xl mb-6 md:mb-8 opacity-90 leading-relaxed">Contact us today and discover how our professional services can benefit your business.</p>
           <Button 
             onClick={handleGetInTouch}
             size="lg" 
-            className="bg-white text-blue-600 hover:bg-gray-50 px-8 py-3 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            className="bg-white text-blue-600 hover:bg-gray-50 px-6 md:px-8 py-3 rounded-xl font-semibold text-base md:text-lg shadow-lg hover:shadow-xl transition-all duration-300"
           >
             Get In Touch
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <ArrowRight className="w-4 md:w-5 h-4 md:h-5 ml-2" />
           </Button>
         </div>
       </div>
