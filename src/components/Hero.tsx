@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, Users, TrendingUp } from 'lucide-react';
 
@@ -16,12 +15,6 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-5xl mx-auto">
-          {/* Badge */}
-          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm text-white px-4 md:px-6 py-2 rounded-full font-semibold mb-6 md:mb-8 text-sm md:text-base">
-            <Shield className="w-4 h-4" />
-            <span>Professional Accounting & Tax Services</span>
-          </div>
-
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 text-white leading-tight">
             Your Trusted
@@ -35,8 +28,6 @@ const Hero = () => {
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed px-4">
             Professional accounting and tax services tailored to your needs. From individual tax returns to complex business strategies, we're here to help you succeed.
           </p>
-
-          {/* CTA Buttons - Removed the non-functional button */}
 
           {/* Trust Indicators */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-12 md:mt-16 max-w-4xl mx-auto">
