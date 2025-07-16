@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -242,12 +241,6 @@ const Contact = () => {
                 <p className="mb-4 md:mb-6 text-white/90 text-sm md:text-base leading-relaxed">
                   Our friendly and professional team is here to meet all your accounting and tax needs.
                 </p>
-                <Button 
-                  onClick={handleDirectEmail}
-                  className="w-full bg-white text-blue-600 hover:bg-gray-50 font-semibold rounded-xl text-sm md:text-base"
-                >
-                  Contact Us Now
-                </Button>
               </CardContent>
             </Card>
           </div>
