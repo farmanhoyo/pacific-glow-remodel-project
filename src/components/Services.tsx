@@ -13,20 +13,20 @@ const Services = () => {
 
   const services = [
     {
-      icon: TrendingUp,
-      title: "Business Strategy",
-      description: "As entrepreneurs we know what it takes to run a successful business. Our service offering includes; Business Strategy Planning, Tax Strategy Planning, Business Plans, Feasibility Studies, Human Resource Consulting and other general business advisory services.",
-      features: ["Business Planning", "Strategy Planning", "Feasibility Studies", "Tax Strategies"],
-      color: "from-blue-500 to-cyan-500",
-      bgColor: "from-blue-50 to-cyan-50"
-    },
-    {
       icon: Calculator,
       title: "Tax Services",
       description: "Comprehensive tax services for businesses and individuals including corporate reorganizations, personal tax preparation, tax planning, and GST/HST filings.",
       features: ["T2 Corporate tax returns", "T1 tax returns", "Corporate Reorganizations", "GST/HST filings"],
       color: "from-purple-500 to-indigo-500",
       bgColor: "from-purple-50 to-indigo-50"
+    },
+    {
+      icon: TrendingUp,
+      title: "Business Strategy",
+      description: "As entrepreneurs we know what it takes to run a successful business. Our service offering includes; Business Strategy Planning, Tax Strategy Planning, Business Plans, Feasibility Studies, Human Resource Consulting and other general business advisory services.",
+      features: ["Business Planning", "Strategy Planning", "Feasibility Studies", "Tax Strategies"],
+      color: "from-blue-500 to-cyan-500",
+      bgColor: "from-blue-50 to-cyan-50"
     },
     {
       icon: Globe,
@@ -62,11 +62,11 @@ const Services = () => {
           </div>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-              Comprehensive
+              Accounting, Tax &
             </span>
             <br />
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Professional Services
+              Business Strategy
             </span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
@@ -107,7 +107,11 @@ const Services = () => {
                   ))}
                 </div>
 
-                <Button variant="ghost" className="group/btn mt-4 md:mt-6 p-0 h-auto text-gray-700 hover:text-blue-600 font-semibold text-sm md:text-base">
+                <Button 
+                  variant="ghost" 
+                  onClick={handleGetInTouch}
+                  className="group/btn mt-4 md:mt-6 p-0 h-auto text-gray-700 hover:text-blue-600 font-semibold text-sm md:text-base"
+                >
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                 </Button>
