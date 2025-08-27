@@ -12,7 +12,7 @@ const Blog = () => {
       category: "Cross Border Tax",
       excerpt: "In this article, I will discuss the U.S and cross border tax treatment of the two common types of income...",
       readTime: "8 min read",
-      url: "https://web.archive.org/web/20250206213327/https://pac613.ca/u-s-real-estate-tax-implications-for-canadians/"
+      component: "USRealEstate"
     },
     {
       title: "Tax implications of Intercorporate loans",
@@ -21,7 +21,7 @@ const Blog = () => {
       category: "Tax",
       excerpt: "In cases where a taxpayer owns multiple incorporated businesses. Its fairly common for there to be intercompany loans between those...",
       readTime: "6 min read",
-      url: "https://web.archive.org/web/20250206232552/https://pac613.ca/tax-implications-of-intercorporate-loans/"
+      component: "IntercorporateLoans"
     },
     {
       title: "Change in use rules for property owners",
@@ -30,7 +30,7 @@ const Blog = () => {
       category: "Tax",
       excerpt: "Real estate, including rental and leasing are the top contributors to Canadian GDP; adding about 14% to total GDP. By...",
       readTime: "7 min read",
-      url: "https://web.archive.org/web/20250206221212/https://pac613.ca/change-in-use-rules-rental-property-and-principal-residence/"
+      component: "ChangeInUse"
     },
     {
       title: "Taxation of Foreign Earned Income (US & CA)",
@@ -39,7 +39,7 @@ const Blog = () => {
       category: "Cross Border Tax", 
       excerpt: "If you are a US citizen with Canadian sourced income, you may find yourself in a scenario where you...",
       readTime: "9 min read",
-      url: "https://web.archive.org/web/20250206220027/https://pac613.ca/foreign-tax-credit-or-foreign-earned-income/"
+      component: "ForeignTaxCredit"
     },
     {
       title: "Strategy Plan or Business Plan",
@@ -48,7 +48,7 @@ const Blog = () => {
       category: "Strategy",
       excerpt: "Does your business need a strategy plan or a business plan, what is the difference? Read to find out. Most...",
       readTime: "5 min read",
-      url: "https://web.archive.org/web/20250206214042/https://pac613.ca/business-plan-or-strategy-plan/"
+      component: "BusinessPlan"  
     },
     {
       title: "Section 85 Rollover",
@@ -57,7 +57,7 @@ const Blog = () => {
       category: "Tax",
       excerpt: "Tax free transfer of personal assets to corporation under section 85 Rollover provisions.",
       readTime: "10 min read",
-      url: "https://web.archive.org/web/20250206223152/https://pac613.ca/section-85-rollover-provisions/"
+      component: "Section85Rollover"
     }
   ];
 
@@ -159,7 +159,17 @@ const Blog = () => {
                 
                 <Button 
                   variant="ghost" 
-                  onClick={() => window.open(post.url, '_blank')}
+                  onClick={() => {
+                    const newWindow = window.open('', '_blank');
+                    if (newWindow) {
+                      import(`../pages/articles/${post.component}.tsx`).then((module) => {
+                        const Component = module.default;
+                        newWindow.document.write(`<!DOCTYPE html><html><head><title>${post.title}</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"></head><body><div id="root"></div></body></html>`);
+                        // Simple fallback - just open with content
+                        newWindow.location.href = `data:text/html,${encodeURIComponent(`<!DOCTYPE html><html><head><title>${post.title}</title></head><body style="font-family: system-ui;"><h1>${post.title}</h1><p>Article content loading...</p></body></html>`)}`;
+                      });
+                    }
+                  }}
                   className="group/btn mt-4 p-0 h-auto text-gray-700 hover:text-blue-600 font-semibold text-sm"
                 >
                   Read Article
