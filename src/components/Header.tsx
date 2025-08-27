@@ -90,6 +90,13 @@ const Header = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300 group-hover:w-full"></span>
             </button>
             <button
+              onClick={() => handleNavClick('blog')}
+              className="relative text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 group"
+            >
+              Expert Blog
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+            </button>
+            <button
               onClick={() => handleNavClick('contact')}
               className="relative text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 group"
             >
@@ -137,6 +144,12 @@ const Header = () => {
                 className="text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors text-left"
               >
                 About
+              </button>
+              <button
+                onClick={() => handleNavClick('blog')}
+                className="text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors text-left"
+              >
+                Expert Blog
               </button>
               <button
                 onClick={() => handleNavClick('contact')}
