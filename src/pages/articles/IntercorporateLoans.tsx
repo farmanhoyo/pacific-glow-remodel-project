@@ -8,14 +8,17 @@ const IntercorporateLoans = () => {
       {/* Header */}
       <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-8">
         <div className="container mx-auto px-4">
-          <Button 
-            variant="ghost" 
-            className="text-white hover:bg-white/20 mb-4"
-            onClick={() => window.close()}
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Close Article
-          </Button>
+          <div className="flex items-center justify-between mb-4">
+            <Button 
+              variant="ghost" 
+              className="text-white hover:bg-white/20"
+              onClick={() => window.close()}
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Close Article
+            </Button>
+            <div className="text-white/80 text-sm font-medium">pac613.ca</div>
+          </div>
           <Badge className="bg-purple-100 text-purple-700 border-purple-200 mb-4">
             Tax
           </Badge>
