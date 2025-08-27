@@ -11,7 +11,8 @@ const Blog = () => {
       date: "January 30, 2023",
       category: "Cross Border Tax",
       excerpt: "In this article, I will discuss the U.S and cross border tax treatment of the two common types of income...",
-      readTime: "8 min read"
+      readTime: "8 min read",
+      url: "https://web.archive.org/web/20250206213327/https://pac613.ca/u-s-real-estate-tax-implications-for-canadians/"
     },
     {
       title: "Tax implications of Intercorporate loans",
@@ -19,7 +20,8 @@ const Blog = () => {
       date: "November 8, 2022",
       category: "Tax",
       excerpt: "In cases where a taxpayer owns multiple incorporated businesses. Its fairly common for there to be intercompany loans between those...",
-      readTime: "6 min read"
+      readTime: "6 min read",
+      url: "https://web.archive.org/web/20250206232552/https://pac613.ca/tax-implications-of-intercorporate-loans/"
     },
     {
       title: "Change in use rules for property owners",
@@ -27,7 +29,8 @@ const Blog = () => {
       date: "May 5, 2022", 
       category: "Tax",
       excerpt: "Real estate, including rental and leasing are the top contributors to Canadian GDP; adding about 14% to total GDP. By...",
-      readTime: "7 min read"
+      readTime: "7 min read",
+      url: "https://web.archive.org/web/20250206221212/https://pac613.ca/change-in-use-rules-rental-property-and-principal-residence/"
     },
     {
       title: "Taxation of Foreign Earned Income (US & CA)",
@@ -35,7 +38,8 @@ const Blog = () => {
       date: "January 31, 2022",
       category: "Cross Border Tax", 
       excerpt: "If you are a US citizen with Canadian sourced income, you may find yourself in a scenario where you...",
-      readTime: "9 min read"
+      readTime: "9 min read",
+      url: "https://web.archive.org/web/20250206220027/https://pac613.ca/foreign-tax-credit-or-foreign-earned-income/"
     },
     {
       title: "Strategy Plan or Business Plan",
@@ -43,7 +47,8 @@ const Blog = () => {
       date: "January 24, 2022",
       category: "Strategy",
       excerpt: "Does your business need a strategy plan or a business plan, what is the difference? Read to find out. Most...",
-      readTime: "5 min read"
+      readTime: "5 min read",
+      url: "https://web.archive.org/web/20250206214042/https://pac613.ca/business-plan-or-strategy-plan/"
     },
     {
       title: "Section 85 Rollover",
@@ -51,7 +56,8 @@ const Blog = () => {
       date: "October 1, 2021",
       category: "Tax",
       excerpt: "Tax free transfer of personal assets to corporation under section 85 Rollover provisions.",
-      readTime: "10 min read"
+      readTime: "10 min read",
+      url: "https://web.archive.org/web/20250206223152/https://pac613.ca/section-85-rollover-provisions/"
     }
   ];
 
@@ -153,12 +159,7 @@ const Blog = () => {
                 
                 <Button 
                   variant="ghost" 
-                  onClick={() => {
-                    const contactSection = document.getElementById('contact');
-                    if (contactSection) {
-                      contactSection.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
+                  onClick={() => window.open(post.url, '_blank')}
                   className="group/btn mt-4 p-0 h-auto text-gray-700 hover:text-blue-600 font-semibold text-sm"
                 >
                   Read Article
