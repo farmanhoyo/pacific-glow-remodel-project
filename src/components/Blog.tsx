@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Calendar, User, ArrowRight, BookOpen } from 'lucide-react';
 
 const Blog = () => {
-  const blogPosts = [
+const blogPosts = [
     {
       title: "Canadians with U.S Real Estate-Taxation",
       author: "Amelia Chan",
@@ -12,7 +12,7 @@ const Blog = () => {
       category: "Cross Border Tax",
       excerpt: "In this article, I will discuss the U.S and cross border tax treatment of the two common types of income...",
       readTime: "8 min read",
-      component: "USRealEstate"
+      slug: "us-real-estate"
     },
     {
       title: "Tax implications of Intercorporate loans",
@@ -21,7 +21,7 @@ const Blog = () => {
       category: "Tax",
       excerpt: "In cases where a taxpayer owns multiple incorporated businesses. Its fairly common for there to be intercompany loans between those...",
       readTime: "6 min read",
-      component: "IntercorporateLoans"
+      slug: "intercorporate-loans"
     },
     {
       title: "Change in use rules for property owners",
@@ -30,7 +30,7 @@ const Blog = () => {
       category: "Tax",
       excerpt: "Real estate, including rental and leasing are the top contributors to Canadian GDP; adding about 14% to total GDP. By...",
       readTime: "7 min read",
-      component: "ChangeInUse"
+      slug: "change-in-use"
     },
     {
       title: "Taxation of Foreign Earned Income (US & CA)",
@@ -39,7 +39,7 @@ const Blog = () => {
       category: "Cross Border Tax", 
       excerpt: "If you are a US citizen with Canadian sourced income, you may find yourself in a scenario where you...",
       readTime: "9 min read",
-      component: "ForeignTaxCredit"
+      slug: "foreign-tax-credit"
     },
     {
       title: "Strategy Plan or Business Plan",
@@ -48,7 +48,7 @@ const Blog = () => {
       category: "Strategy",
       excerpt: "Does your business need a strategy plan or a business plan, what is the difference? Read to find out. Most...",
       readTime: "5 min read",
-      component: "BusinessPlan"  
+      slug: "business-plan"
     },
     {
       title: "Section 85 Rollover",
@@ -57,7 +57,7 @@ const Blog = () => {
       category: "Tax",
       excerpt: "Tax free transfer of personal assets to corporation under section 85 Rollover provisions.",
       readTime: "10 min read",
-      component: "Section85Rollover"
+      slug: "section-85-rollover"
     }
   ];
 
@@ -160,15 +160,7 @@ const Blog = () => {
                 <Button 
                   variant="ghost" 
                   onClick={() => {
-                    const newWindow = window.open('', '_blank');
-                    if (newWindow) {
-                      import(`../pages/articles/${post.component}.tsx`).then((module) => {
-                        const Component = module.default;
-                        newWindow.document.write(`<!DOCTYPE html><html><head><title>${post.title}</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"></head><body><div id="root"></div></body></html>`);
-                        // Simple fallback - just open with content
-                        newWindow.location.href = `data:text/html,${encodeURIComponent(`<!DOCTYPE html><html><head><title>${post.title}</title></head><body style="font-family: system-ui;"><h1>${post.title}</h1><p>Article content loading...</p></body></html>`)}`;
-                      });
-                    }
+                    window.open(`/articles/${post.slug}`, '_blank');
                   }}
                   className="group/btn mt-4 p-0 h-auto text-gray-700 hover:text-blue-600 font-semibold text-sm"
                 >
