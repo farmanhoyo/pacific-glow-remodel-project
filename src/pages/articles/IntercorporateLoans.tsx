@@ -1,8 +1,10 @@
 import { ArrowLeft, Calendar, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { useNavigate } from 'react-router-dom';
 
 const IntercorporateLoans = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -12,7 +14,7 @@ const IntercorporateLoans = () => {
             <Button 
               variant="ghost" 
               className="text-white hover:bg-white/20"
-              onClick={() => window.close()}
+              onClick={() => navigate('/')}
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Close Article
@@ -91,10 +93,7 @@ const IntercorporateLoans = () => {
               </p>
               <Button 
                 className="bg-purple-600 hover:bg-purple-700 text-white"
-                onClick={() => {
-                  window.opener?.document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                  window.close();
-                }}
+                onClick={() => navigate('/#contact')}
               >
                 Get Expert Help
               </Button>
