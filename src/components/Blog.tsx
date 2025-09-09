@@ -2,8 +2,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Calendar, User, ArrowRight, BookOpen } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Blog = () => {
+  const navigate = useNavigate();
 const blogPosts = [
     {
       title: "Canadians with U.S Real Estate-Taxation",
@@ -159,9 +161,7 @@ const blogPosts = [
                 
                 <Button 
                   variant="ghost" 
-                  onClick={() => {
-                    window.open(`/articles/${post.slug}`, '_blank');
-                  }}
+                  onClick={() => navigate(`/articles/${post.slug}`)}
                   className="group/btn mt-4 p-0 h-auto text-gray-700 hover:text-blue-600 font-semibold text-sm"
                 >
                   Read Article
