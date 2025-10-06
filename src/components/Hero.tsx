@@ -19,15 +19,15 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background with diagonal white pattern - matching original */}
+      {/* Background with diagonal teal pattern - matching original with teal theme */}
       <div className="absolute inset-0 bg-gray-100">
         <div className="absolute inset-0 opacity-30" style={{
           backgroundImage: `repeating-linear-gradient(
             45deg,
             transparent,
             transparent 35px,
-            rgba(255,255,255,.8) 35px,
-            rgba(255,255,255,.8) 70px
+            rgba(20, 184, 166, 0.15) 35px,
+            rgba(20, 184, 166, 0.15) 70px
           )`
         }}></div>
       </div>
