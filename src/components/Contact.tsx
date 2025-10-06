@@ -60,10 +60,6 @@ const Contact = () => {
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-12 md:mb-20">
-          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm text-white px-4 md:px-6 py-2 rounded-full font-semibold mb-4 md:mb-6 text-sm md:text-base">
-            <MessageSquare className="w-4 h-4" />
-            <span>Contact</span>
-          </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-white leading-tight">
             Get In Touch
             <br />
