@@ -125,13 +125,13 @@ const blogPosts = [
           {blogPosts.map((post, index) => (
             <Card 
               key={index}
-              className="group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-white"
+              className="group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-white flex flex-col h-full"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               {post.image && (
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-48 overflow-hidden flex-shrink-0">
                   <img 
                     src={post.image} 
                     alt={post.title}
@@ -140,7 +140,8 @@ const blogPosts = [
                 </div>
               )}
               
-              <CardHeader className="relative z-10 p-4 md:p-6">
+              <div className="flex flex-col flex-grow">
+                <CardHeader className="relative z-10 p-4 md:p-6 pb-3">
                 <div className="flex items-center justify-between mb-3">
                   <Badge className={`${getCategoryBg(post.category)} border`}>
                     {post.category}
@@ -155,31 +156,34 @@ const blogPosts = [
                 <p className="text-gray-600 leading-relaxed text-sm md:text-base line-clamp-3 mb-4">
                   {post.excerpt}
                 </p>
-              </CardHeader>
-              
-              <CardContent className="relative z-10 p-4 md:p-6 pt-0">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-4 text-sm text-gray-500">
-                    <div className="flex items-center space-x-1">
-                      <User className="w-3 h-3" />
-                      <span>{post.author}</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <Calendar className="w-3 h-3" />
-                      <span>{post.date}</span>
+                </CardHeader>
+                
+                <CardContent className="relative z-10 p-4 md:p-6 pt-0 flex flex-col flex-grow">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-4 text-sm text-gray-500">
+                      <div className="flex items-center space-x-1">
+                        <User className="w-3 h-3" />
+                        <span>{post.author}</span>
+                      </div>
+                      <div className="flex items-center space-x-1">
+                        <Calendar className="w-3 h-3" />
+                        <span>{post.date}</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-                
-                <Button 
-                  variant="ghost" 
-                  onClick={() => navigate(`/articles/${post.slug}`)}
-                  className="group/btn mt-4 p-0 h-auto text-gray-700 hover:text-blue-600 font-semibold text-sm"
-                >
-                  Read Article
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
-              </CardContent>
+                  
+                  <div className="mt-auto">
+                    <Button 
+                      variant="ghost" 
+                      onClick={() => navigate(`/articles/${post.slug}`)}
+                      className="group/btn p-0 h-auto text-gray-700 hover:text-blue-600 font-semibold text-sm"
+                    >
+                      Read Article
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </div>
+                </CardContent>
+              </div>
             </Card>
           ))}
         </div>

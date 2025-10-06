@@ -127,16 +127,15 @@ const Services = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl md:rounded-3xl p-8 md:p-12 text-white mx-4 md:mx-0">
-          <h3 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4">Ready to Get Started?</h3>
-          <p className="text-lg md:text-xl mb-6 md:mb-8 opacity-90 leading-relaxed">Contact us today and discover how our professional services can benefit your business.</p>
+        {/* Premium Service Message - matching original site tone */}
+        <div className="text-center bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl md:rounded-3xl p-8 md:p-12 text-white mx-4 md:mx-0">
+          <p className="text-2xl md:text-3xl font-bold mb-6 italic">premium service | expert advice.</p>
           <Button 
             onClick={handleGetInTouch}
             size="lg" 
-            className="bg-white text-blue-600 hover:bg-gray-50 px-6 md:px-8 py-3 rounded-xl font-semibold text-base md:text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            className="bg-white text-gray-900 hover:bg-gray-50 px-6 md:px-8 py-3 rounded-xl font-semibold text-base md:text-lg shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            Get In Touch
+            get started
             <ArrowRight className="w-4 md:w-5 h-4 md:h-5 ml-2" />
           </Button>
         </div>

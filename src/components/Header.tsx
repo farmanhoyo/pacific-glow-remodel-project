@@ -53,16 +53,16 @@ const Header = () => {
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center space-x-3">
             <div className="relative">
-              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-primary-foreground font-bold text-xl">P</span>
+              <div className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center shadow-lg">
+                <span className="text-white font-bold text-xl">P</span>
               </div>
-              <div className="absolute -top-1 -right-1 w-4 h-4 bg-accent rounded-full animate-pulse"></div>
+              <div className="absolute -top-1 -right-1 w-4 h-4 bg-teal-600 rounded-full animate-pulse"></div>
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-foreground">
+              <h1 className="text-2xl font-bold text-gray-900">
                 PAC Consulting
               </h1>
-              <p className="text-sm text-muted-foreground font-medium">Accounting | Tax and Business Strategy</p>
+              <p className="text-sm text-gray-600 font-medium">Accounting | Tax and Business Strategy</p>
             </div>
           </div>
           
@@ -70,45 +70,45 @@ const Header = () => {
           <nav className="hidden lg:flex items-center space-x-8">
             <button
               onClick={() => handleNavClick('hero')}
-              className="relative text-foreground hover:text-primary font-medium transition-all duration-300 group"
+              className="relative text-gray-700 hover:text-gray-900 font-medium transition-all duration-300 group"
             >
               Home
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
             </button>
             <button
               onClick={() => handleNavClick('services')}
-              className="relative text-foreground hover:text-primary font-medium transition-all duration-300 group"
+              className="relative text-gray-700 hover:text-gray-900 font-medium transition-all duration-300 group"
             >
               Services
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
             </button>
             <button
-              onClick={() => handleNavClick('expertise')}
-              className="relative text-foreground hover:text-primary font-medium transition-all duration-300 group"
+              onClick={() => handleNavClick('about')}
+              className="relative text-gray-700 hover:text-gray-900 font-medium transition-all duration-300 group"
             >
               About
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
             </button>
             <button
               onClick={() => handleNavClick('blog')}
-              className="relative text-foreground hover:text-primary font-medium transition-all duration-300 group"
+              className="relative text-gray-700 hover:text-gray-900 font-medium transition-all duration-300 group"
             >
               Expert Blog
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
             </button>
             <button
               onClick={() => handleNavClick('contact')}
-              className="relative text-foreground hover:text-primary font-medium transition-all duration-300 group"
+              className="relative text-gray-700 hover:text-gray-900 font-medium transition-all duration-300 group"
             >
               Contact
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
             </button>
           </nav>
 
           <div className="flex items-center space-x-4">
             <Button 
               onClick={handleGetInTouch}
-              className="hidden lg:flex bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              className="hidden lg:flex bg-gray-800 hover:bg-gray-900 text-white px-6 py-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
             >
               Get In Touch
             </Button>
@@ -129,37 +129,37 @@ const Header = () => {
             <nav className="flex flex-col space-y-4">
               <button
                 onClick={() => handleNavClick('hero')}
-                className="text-foreground hover:text-primary font-medium py-2 transition-colors text-left"
+                className="text-gray-700 hover:text-gray-900 font-medium py-2 transition-colors text-left"
               >
                 Home
               </button>
               <button
                 onClick={() => handleNavClick('services')}
-                className="text-foreground hover:text-primary font-medium py-2 transition-colors text-left"
+                className="text-gray-700 hover:text-gray-900 font-medium py-2 transition-colors text-left"
               >
                 Services
               </button>
               <button
-                onClick={() => handleNavClick('expertise')}
-                className="text-foreground hover:text-primary font-medium py-2 transition-colors text-left"
+                onClick={() => handleNavClick('about')}
+                className="text-gray-700 hover:text-gray-900 font-medium py-2 transition-colors text-left"
               >
                 About
               </button>
               <button
                 onClick={() => handleNavClick('blog')}
-                className="text-foreground hover:text-primary font-medium py-2 transition-colors text-left"
+                className="text-gray-700 hover:text-gray-900 font-medium py-2 transition-colors text-left"
               >
                 Expert Blog
               </button>
               <button
                 onClick={() => handleNavClick('contact')}
-                className="text-foreground hover:text-primary font-medium py-2 transition-colors text-left"
+                className="text-gray-700 hover:text-gray-900 font-medium py-2 transition-colors text-left"
               >
                 Contact
               </button>
               <Button 
                 onClick={handleGetInTouch}
-                className="mt-4 bg-primary text-primary-foreground"
+                className="mt-4 bg-gray-800 hover:bg-gray-900 text-white"
               >
                 Get In Touch
               </Button>
