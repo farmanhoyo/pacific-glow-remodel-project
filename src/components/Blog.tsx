@@ -112,7 +112,11 @@ const blogPosts = [
           </div>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-              Expert Insights &<br />Professional Guidance
+              Expert Insights &
+            </span>
+            <br />
+            <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+              Professional Guidance
             </span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
@@ -130,13 +134,17 @@ const blogPosts = [
             >
               <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
-              {post.image && (
+              {post.image ? (
                 <div className="relative h-48 overflow-hidden flex-shrink-0">
                   <img 
                     src={post.image} 
                     alt={post.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
+                </div>
+              ) : (
+                <div className="relative h-48 overflow-hidden flex-shrink-0 bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center">
+                  <BookOpen className="w-16 h-16 text-blue-200" />
                 </div>
               )}
               
