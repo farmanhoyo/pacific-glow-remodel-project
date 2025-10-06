@@ -11,6 +11,10 @@ import ChangeInUse from "./pages/articles/ChangeInUse";
 import ForeignTaxCredit from "./pages/articles/ForeignTaxCredit";
 import BusinessPlan from "./pages/articles/BusinessPlan";
 import Section85Rollover from "./pages/articles/Section85Rollover";
+import TaxServices from "./pages/services/TaxServices";
+import Accounting from "./pages/services/Accounting";
+import BusinessStrategy from "./pages/services/BusinessStrategy";
+import CrossBorderTax from "./pages/services/CrossBorderTax";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +32,10 @@ const App = () => (
           <Route path="/articles/foreign-tax-credit" element={<ForeignTaxCredit />} />
           <Route path="/articles/business-plan" element={<BusinessPlan />} />
           <Route path="/articles/section-85-rollover" element={<Section85Rollover />} />
+          <Route path="/services/tax-services" element={<TaxServices />} />
+          <Route path="/services/accounting" element={<Accounting />} />
+          <Route path="/services/business-strategy" element={<BusinessStrategy />} />
+          <Route path="/services/cross-border-tax" element={<CrossBorderTax />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

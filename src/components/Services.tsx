@@ -1,9 +1,12 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Calculator, FileText, TrendingUp, Users, Briefcase, PieChart, ArrowRight, Globe } from 'lucide-react';
+import { Calculator, FileText, TrendingUp, Globe, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 
 const Services = () => {
+  const navigate = useNavigate();
+
   const handleGetInTouch = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
@@ -15,34 +18,38 @@ const Services = () => {
     {
       icon: Calculator,
       title: "Tax Services",
-      description: "Comprehensive tax services for businesses and individuals including corporate reorganizations, personal tax preparation, tax planning, and GST/HST filings.",
-      features: ["T2 Corporate tax returns", "T1 tax returns", "Corporate Reorganizations", "GST/HST filings"],
+      description: "Corporate tax (T2 ,GST/HST) returns\n\nPersonal Tax (T1) ,(T3)Returns\n\nCorporate Reorganizations\n\nReal Estate Tax Consulting",
+      features: ["Corporate tax (T2 ,GST/HST) returns", "Personal Tax (T1) ,(T3)Returns", "Corporate Reorganizations", "Real Estate Tax Consulting"],
       color: "from-purple-500 to-indigo-500",
-      bgColor: "from-purple-50 to-indigo-50"
+      bgColor: "from-purple-50 to-indigo-50",
+      slug: "tax-services"
+    },
+    {
+      icon: FileText,
+      title: "Accounting",
+      description: "Notice to Reader Reports\n\nComplex Journal Entries\n\nCash Projections and analysis\n\nBudgets and Forecasts",
+      features: ["Notice to Reader Reports", "Complex Journal Entries", "Cash Projections and analysis", "Budgets and Forecasts"],
+      color: "from-blue-500 to-cyan-500",
+      bgColor: "from-blue-50 to-cyan-50",
+      slug: "accounting"
     },
     {
       icon: TrendingUp,
       title: "Business Strategy",
-      description: "As entrepreneurs we know what it takes to run a successful business. Our service offering includes; Business Strategy Planning, Tax Strategy Planning, Business Plans, Feasibility Studies, Human Resource Consulting and other general business advisory services.",
-      features: ["Business Planning", "Strategy Planning", "Feasibility Studies", "Tax Strategies"],
-      color: "from-blue-500 to-cyan-500",
-      bgColor: "from-blue-50 to-cyan-50"
+      description: "Strategy Planning\n\nFeasibility Studies\n\nDigital Strategy Planning\n\nCustom Strategy Reports",
+      features: ["Strategy Planning", "Feasibility Studies", "Digital Strategy Planning", "Custom Strategy Reports"],
+      color: "from-emerald-500 to-teal-500",
+      bgColor: "from-emerald-50 to-teal-50",
+      slug: "business-strategy"
     },
     {
       icon: Globe,
       title: "Cross Border Tax",
-      description: "Our cross border tax practice includes compliance certificates, withholding certificates, tax ID applications, and tax treaty exemption applications.",
-      features: ["CRA compliance certificates (T2062)", "IRS Withholding certificates (8288-B)", "US Tax ID applications (ITIN)", "Tax Treaty Exemption applications"],
-      color: "from-emerald-500 to-teal-500",
-      bgColor: "from-emerald-50 to-teal-50"
-    },
-    {
-      icon: FileText,
-      title: "Other Ancillary Services",
-      description: "Additional professional services to support your business needs including human resources, financing assistance, and incorporation services.",
-      features: ["Human Resource Consulting", "Capital/Debt Financing", "Incorporation Services", "Business Grants"],
+      description: "Personal (1040 and 1040NR)\n\nCorporate (1120 and 1165)\n\nCross Border Real Estate\n\nITIN number applications",
+      features: ["Personal (1040 and 1040NR)", "Corporate (1120 and 1165)", "Cross Border Real Estate", "ITIN number applications"],
       color: "from-orange-500 to-red-500",
-      bgColor: "from-orange-50 to-red-50"
+      bgColor: "from-orange-50 to-red-50",
+      slug: "cross-border-tax"
     }
   ];
 
@@ -109,10 +116,10 @@ const Services = () => {
 
                 <Button 
                   variant="ghost" 
-                  onClick={handleGetInTouch}
+                  onClick={() => navigate(`/services/${service.slug}`)}
                   className="group/btn mt-4 md:mt-6 p-0 h-auto text-gray-700 hover:text-blue-600 font-semibold text-sm md:text-base"
                 >
-                  Learn More
+                  learn more
                   <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                 </Button>
               </CardContent>
