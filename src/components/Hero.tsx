@@ -19,15 +19,15 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background with diagonal teal pattern - matching original with teal theme */}
+      {/* Background with diagonal gray/white pattern - matching original site */}
       <div className="absolute inset-0 bg-gray-100">
-        <div className="absolute inset-0 opacity-30" style={{
+        <div className="absolute inset-0 opacity-40" style={{
           backgroundImage: `repeating-linear-gradient(
             45deg,
             transparent,
             transparent 35px,
-            rgba(20, 184, 166, 0.15) 35px,
-            rgba(20, 184, 166, 0.15) 70px
+            rgba(200, 200, 200, 0.3) 35px,
+            rgba(200, 200, 200, 0.3) 70px
           )`
         }}></div>
       </div>
@@ -44,18 +44,18 @@ const Hero = () => {
             <Button 
               onClick={handleContactUs}
               size="lg" 
-              className="bg-teal-700 hover:bg-teal-800 text-white px-8 py-6 text-lg font-semibold rounded-none shadow-lg transition-all duration-300"
+              className="bg-emerald-700 hover:bg-emerald-800 text-white px-8 py-6 text-lg font-semibold rounded-none shadow-lg transition-all duration-300"
             >
-              CONTACT US
+              contact us
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button 
               onClick={handleScrollToServices}
               size="lg" 
               variant="outline"
-              className="border-2 border-teal-700 text-teal-700 hover:bg-teal-50 px-8 py-6 text-lg font-semibold rounded-none shadow-lg transition-all duration-300"
+              className="border-2 border-gray-700 text-gray-700 hover:bg-gray-50 px-8 py-6 text-lg font-semibold rounded-none shadow-lg transition-all duration-300"
             >
-              OUR SERVICES
+              our services
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </div>
