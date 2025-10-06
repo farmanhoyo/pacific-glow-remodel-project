@@ -96,13 +96,6 @@ const Header = () => {
               Expert Blog
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
             </button>
-            <button
-              onClick={() => handleNavClick('contact')}
-              className="relative text-gray-700 hover:text-gray-900 font-medium transition-all duration-300 group"
-            >
-              Contact
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
-            </button>
           </nav>
 
           <div className="flex items-center space-x-4">
@@ -150,12 +143,6 @@ const Header = () => {
                 className="text-gray-700 hover:text-gray-900 font-medium py-2 transition-colors text-left"
               >
                 Expert Blog
-              </button>
-              <button
-                onClick={() => handleNavClick('contact')}
-                className="text-gray-700 hover:text-gray-900 font-medium py-2 transition-colors text-left"
-              >
-                Contact
               </button>
               <Button 
                 onClick={handleGetInTouch}
