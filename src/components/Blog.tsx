@@ -14,8 +14,7 @@ const blogPosts = [
       category: "Cross Border Tax",
       excerpt: "In this article, I will discuss the U.S and cross border tax treatment of the two common types of income...",
       readTime: "8 min read",
-      slug: "us-real-estate",
-      image: null
+      slug: "us-real-estate"
     },
     {
       title: "Tax implications of Intercorporate loans",
@@ -24,8 +23,7 @@ const blogPosts = [
       category: "Tax",
       excerpt: "In cases where a taxpayer owns multiple incorporated businesses. Its fairly common for there to be intercompany loans between those...",
       readTime: "6 min read",
-      slug: "intercorporate-loans",
-      image: null
+      slug: "intercorporate-loans"
     },
     {
       title: "Change in use rules for property owners",
@@ -34,8 +32,7 @@ const blogPosts = [
       category: "Tax",
       excerpt: "Real estate, including rental and leasing are the top contributors to Canadian GDP; adding about 14% to total GDP. By...",
       readTime: "7 min read",
-      slug: "change-in-use",
-      image: "https://new.pac613.ca/wp-content/uploads/2022/05/qtq80-YNBnjw-1024x553.jpeg"
+      slug: "change-in-use"
     },
     {
       title: "Taxation of Foreign Earned Income (US & CA)",
@@ -44,8 +41,7 @@ const blogPosts = [
       category: "Cross Border Tax", 
       excerpt: "If you are a US citizen with Canadian sourced income, you may find yourself in a scenario where you...",
       readTime: "9 min read",
-      slug: "foreign-tax-credit",
-      image: null
+      slug: "foreign-tax-credit"
     },
     {
       title: "Strategy Plan or Business Plan",
@@ -54,8 +50,7 @@ const blogPosts = [
       category: "Strategy",
       excerpt: "Does your business need a strategy plan or a business plan, what is the difference? Read to find out. Most...",
       readTime: "5 min read",
-      slug: "business-plan",
-      image: "https://new.pac613.ca/wp-content/uploads/2022/01/business-strategy-3-1024x615.jpg"
+      slug: "business-plan"
     },
     {
       title: "Section 85 Rollover",
@@ -64,8 +59,7 @@ const blogPosts = [
       category: "Tax",
       excerpt: "Tax free transfer of personal assets to corporation under section 85 Rollover provisions.",
       readTime: "10 min read",
-      slug: "section-85-rollover",
-      image: "https://new.pac613.ca/wp-content/uploads/2021/12/small-business.jpg"
+      slug: "section-85-rollover"
     }
   ];
 
@@ -134,21 +128,7 @@ const blogPosts = [
             >
               <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
-              {post.image ? (
-                <div className="relative h-48 overflow-hidden flex-shrink-0">
-                  <img 
-                    src={post.image} 
-                    alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-              ) : (
-                <div className="relative h-48 overflow-hidden flex-shrink-0 bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center">
-                  <BookOpen className="w-16 h-16 text-blue-200" />
-                </div>
-              )}
-              
-              <div className="flex flex-col flex-grow">
+              <div className="flex flex-col flex-grow h-full">
                 <CardHeader className="relative z-10 p-4 md:p-6 pb-3">
                 <div className="flex items-center justify-between mb-3">
                   <Badge className={`${getCategoryBg(post.category)} border`}>
