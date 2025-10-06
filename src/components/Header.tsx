@@ -53,7 +53,7 @@ const Header = () => {
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center space-x-3">
             <div className="relative">
-              <div className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center shadow-lg">
+              <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg">
                 <span className="text-white font-bold text-xl">P</span>
               </div>
               <div className="absolute -top-1 -right-1 w-4 h-4 bg-teal-600 rounded-full animate-pulse"></div>
@@ -108,7 +108,7 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <Button 
               onClick={handleGetInTouch}
-              className="hidden lg:flex bg-gray-800 hover:bg-gray-900 text-white px-6 py-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              className="hidden lg:flex bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
             >
               Get In Touch
             </Button>
@@ -159,7 +159,7 @@ const Header = () => {
               </button>
               <Button 
                 onClick={handleGetInTouch}
-                className="mt-4 bg-gray-800 hover:bg-gray-900 text-white"
+                className="mt-4 bg-blue-600 hover:bg-blue-700 text-white"
               >
                 Get In Touch
               </Button>

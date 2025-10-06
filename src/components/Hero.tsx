@@ -44,7 +44,7 @@ const Hero = () => {
             <Button 
               onClick={handleContactUs}
               size="lg" 
-              className="bg-emerald-700 hover:bg-emerald-800 text-white px-8 py-6 text-lg font-semibold rounded-none shadow-lg transition-all duration-300"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg font-semibold rounded-none shadow-lg transition-all duration-300"
             >
               contact us
               <ArrowRight className="w-5 h-5 ml-2" />
