@@ -46,13 +46,13 @@ const Hero = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-5xl mx-auto py-20 md:py-24">
           {/* Visual frame */}
-          <div className="mb-16 relative">
+          <div className="mb-12 md:mb-16 relative">
             <div className="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-blue-600/20 rounded-tl-3xl"></div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-4 border-r-4 border-blue-600/20 rounded-br-3xl"></div>
             
             {/* Headline with visual treatment */}
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight relative">
-              <span className="block text-gray-900 mb-3 bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 bg-clip-text">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight relative px-4">
+              <span className="block text-gray-900 mb-2 md:mb-3 bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 bg-clip-text">
                 Accounting, Tax and
               </span>
               <span className="block text-transparent bg-gradient-to-r from-blue-600 via-blue-700 to-blue-600 bg-clip-text">
@@ -62,29 +62,29 @@ const Hero = () => {
           </div>
 
           {/* Descriptive text */}
-          <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-16 px-4">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12 md:mb-16 px-4">
             We use our broad expertise and knowledge in the finance, technology and the legal landscape 
             to help you execute on your business strategy needs.
           </p>
 
           {/* Enhanced CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-5 justify-center items-center px-4">
             <Button 
               onClick={handleContactUs}
               size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-12 py-7 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 md:px-12 py-6 md:py-7 text-base md:text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               contact us
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-4 md:w-5 h-4 md:h-5 ml-2" />
             </Button>
             <Button 
               onClick={handleScrollToServices}
               size="lg" 
               variant="outline"
-              className="border-2 border-blue-600 text-blue-700 hover:bg-blue-50 px-12 py-7 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105"
+              className="w-full sm:w-auto border-2 border-blue-600 text-blue-700 hover:bg-blue-50 px-8 md:px-12 py-6 md:py-7 text-base md:text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105"
             >
               our services
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-4 md:w-5 h-4 md:h-5 ml-2" />
             </Button>
           </div>
         </div>
