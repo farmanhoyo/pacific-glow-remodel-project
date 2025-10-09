@@ -45,20 +45,23 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-5xl mx-auto py-20 md:py-24 px-4">
-          {/* Visual frame */}
-          <div className="mb-12 md:mb-16 relative px-8 md:px-16 py-8">
-            <div className="absolute -top-8 -left-8 md:-top-10 md:-left-10 w-20 h-20 md:w-24 md:h-24 border-t-4 border-l-4 border-blue-600/20 rounded-tl-3xl"></div>
-            <div className="absolute -bottom-8 -right-8 md:-bottom-10 md:-right-10 w-20 h-20 md:w-24 md:h-24 border-b-4 border-r-4 border-blue-600/20 rounded-br-3xl"></div>
+          {/* Visual frame - Outer container for borders */}
+          <div className="mb-12 md:mb-16 relative">
+            <div className="absolute -top-6 -left-6 w-20 h-20 md:w-24 md:h-24 border-t-4 border-l-4 border-blue-600/20 rounded-tl-3xl"></div>
+            <div className="absolute -bottom-6 -right-6 w-20 h-20 md:w-24 md:h-24 border-b-4 border-r-4 border-blue-600/20 rounded-br-3xl"></div>
             
-            {/* Headline with visual treatment */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight relative">
-              <span className="block text-gray-900 mb-2 md:mb-3 bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 bg-clip-text">
-                Accounting, Tax and
-              </span>
-              <span className="block text-transparent bg-gradient-to-r from-blue-600 via-blue-700 to-blue-600 bg-clip-text">
-                Business Strategy
-              </span>
-            </h1>
+            {/* Inner container with safe padding */}
+            <div className="px-10 py-10 md:px-20 md:py-12">
+              {/* Headline with visual treatment */}
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                <span className="block text-gray-900 mb-2 md:mb-3 bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 bg-clip-text">
+                  Accounting, Tax and
+                </span>
+                <span className="block text-transparent bg-gradient-to-r from-blue-600 via-blue-700 to-blue-600 bg-clip-text">
+                  Business Strategy
+                </span>
+              </h1>
+            </div>
           </div>
 
           {/* Descriptive text */}
