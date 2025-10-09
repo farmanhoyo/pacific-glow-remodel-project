@@ -1,15 +1,8 @@
 
 import { Card, CardContent } from '@/components/ui/card';
-import { Award, Users, Clock, Star, Trophy, Target, Briefcase, Globe } from 'lucide-react';
+import { Award, Trophy, Target, Briefcase, Globe } from 'lucide-react';
 
 const About = () => {
-  const stats = [
-    { icon: Target, number: "Expert", label: "Tax Solutions", color: "from-blue-500 to-cyan-500" },
-    { icon: Globe, number: "Cross", label: "Border Tax", color: "from-purple-500 to-indigo-500" },
-    { icon: Briefcase, number: "Business", label: "Strategy", color: "from-emerald-500 to-teal-500" },
-    { icon: Award, number: "Professional", label: "Service", color: "from-amber-500 to-orange-500" }
-  ];
-
   const achievements = [
     { icon: Trophy, title: "Business Planning", desc: "For start ups looking for financing, we have expertise in developing business plans for businesses of all sizes." },
     { icon: Target, title: "Strategy Planning", desc: "Visionary entrepreneurs always need to have a clear and concise roadmap on how to best achieve their long term goals." },
@@ -92,22 +85,6 @@ const About = () => {
               </div>
             </div>
 
-            {/* Service Areas Grid */}
-            <div className="grid grid-cols-2 gap-6">
-              {stats.map((stat, index) => (
-                <Card key={index} className="group text-center p-8 border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-white">
-                  <CardContent className="space-y-4">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                      <stat.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-                      {stat.number}
-                    </div>
-                    <div className="text-gray-600 font-semibold">{stat.label}</div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
 
             {/* Professional Badge */}
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white text-center shadow-xl">
