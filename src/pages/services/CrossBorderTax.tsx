@@ -11,7 +11,7 @@ const CrossBorderTax = () => {
     <div className="min-h-screen bg-white">
       <Header />
       
-      <article className="container mx-auto px-4 py-24 max-w-4xl">
+      <article className="container mx-auto px-4 py-32 max-w-4xl">
         <Button
           variant="ghost"
           onClick={() => navigate('/')}

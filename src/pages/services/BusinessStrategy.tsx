@@ -11,7 +11,7 @@ const BusinessStrategy = () => {
     <div className="min-h-screen bg-white">
       <Header />
       
-      <article className="container mx-auto px-4 py-24 max-w-4xl">
+      <article className="container mx-auto px-4 py-32 max-w-4xl">
         <Button
           variant="ghost"
           onClick={() => navigate('/')}
@@ -26,7 +26,7 @@ const BusinessStrategy = () => {
 
           <div className="bg-gray-50 p-8 rounded-lg mb-8">
             <p className="text-gray-700 mb-8 leading-relaxed text-lg">
-              As entrepreneurs we know what it takes to run a successful business. Our service offering includes; <strong>Business Strategy Planning</strong>, <strong>Tax Strategy Planning</strong>, <strong>Business Plans</strong>, <strong>Feasibility Studies</strong>, <strong>Human Resource Consulting</strong> and other general business advisory services. We use our broad expertise and knowledge in the finance, technology and the legal landscape to help you execute on your business strategy needs.
+              As entrepreneurs we know what it takes to run a successful business. Our service offering includes; <strong>Business Strategy Planning</strong>, <strong>Tax Strategy Planning</strong>, <strong>Business Plans</strong>, <strong>Feasibility Studies</strong>, <strong>Human Resource Consulting</strong> and other general business advisory services.
             </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Business Planning</h2>
