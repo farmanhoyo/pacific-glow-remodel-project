@@ -19,7 +19,15 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
-      <div className="container mx-auto px-4 md:px-6">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-white">
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: `radial-gradient(circle at 2px 2px, rgb(59, 130, 246) 1px, transparent 0)`,
+          backgroundSize: '48px 48px'
+        }}></div>
+      </div>
+
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto py-32">
           {/* Minimal Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
