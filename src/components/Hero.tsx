@@ -61,18 +61,11 @@ const Hero = () => {
             </h1>
           </div>
 
-          {/* Icon showcase */}
-          <div className="flex justify-center items-center gap-8 md:gap-16 mb-16 opacity-60">
-            <div className="p-4 rounded-2xl bg-blue-50/50 border border-blue-100 backdrop-blur-sm transform hover:scale-110 transition-transform">
-              <Shield className="w-10 h-10 text-blue-600" />
-            </div>
-            <div className="p-4 rounded-2xl bg-blue-50/50 border border-blue-100 backdrop-blur-sm transform hover:scale-110 transition-transform">
-              <Users className="w-10 h-10 text-blue-600" />
-            </div>
-            <div className="p-4 rounded-2xl bg-blue-50/50 border border-blue-100 backdrop-blur-sm transform hover:scale-110 transition-transform">
-              <TrendingUp className="w-10 h-10 text-blue-600" />
-            </div>
-          </div>
+          {/* Descriptive text */}
+          <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-16 px-4">
+            We use our broad expertise and knowledge in the finance, technology and the legal landscape 
+            to help you execute on your business strategy needs.
+          </p>
 
           {/* Enhanced CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
