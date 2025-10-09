@@ -28,7 +28,7 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="text-center max-w-4xl mx-auto py-32">
+        <div className="text-center max-w-4xl mx-auto py-20 md:py-24">
           {/* Minimal Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
             <span className="block text-gray-900 mb-2">Accounting|</span>
