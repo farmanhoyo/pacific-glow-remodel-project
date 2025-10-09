@@ -54,7 +54,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section id="services" className="py-12 md:py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -63,7 +63,7 @@ const Services = () => {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 mb-10 md:mb-12">
           {services.map((service, index) => (
             <Card 
               key={index} 
@@ -109,8 +109,8 @@ const Services = () => {
         </div>
 
         {/* Premium Service Message - matching original site tone */}
-        <div className="text-center bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl md:rounded-3xl p-8 md:p-12 text-white mx-4 md:mx-0">
-          <p className="text-2xl md:text-3xl font-bold mb-6 italic">premium service | expert advice.</p>
+        <div className="text-center bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl md:rounded-3xl p-6 md:p-10 text-white mx-4 md:mx-0">
+          <p className="text-2xl md:text-3xl font-bold mb-5 italic">premium service | expert advice.</p>
           <Button 
             onClick={handleGetInTouch}
             size="lg" 

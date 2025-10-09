@@ -18,7 +18,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+    <section id="hero" className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-white">
       {/* Enhanced layered background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-gray-50"></div>
@@ -44,14 +44,14 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="text-center max-w-5xl mx-auto py-20 md:py-24 px-4">
+        <div className="text-center max-w-5xl mx-auto py-12 md:py-16 px-4">
           {/* Visual frame - Outer container for borders */}
-          <div className="mb-12 md:mb-16 relative">
+          <div className="mb-8 md:mb-10 relative">
             <div className="absolute -top-6 -left-6 w-20 h-20 md:w-24 md:h-24 border-t-4 border-l-4 border-blue-600/20 rounded-tl-3xl"></div>
             <div className="absolute -bottom-6 -right-6 w-20 h-20 md:w-24 md:h-24 border-b-4 border-r-4 border-blue-600/20 rounded-br-3xl"></div>
             
             {/* Inner container with safe padding */}
-            <div className="px-12 py-10 md:px-32 md:py-12 overflow-visible">
+            <div className="px-8 py-6 md:px-20 md:py-8 overflow-visible">
               {/* Headline with visual treatment */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold max-w-4xl mx-auto" style={{ lineHeight: '1.3' }}>
                 <span className="block text-gray-900 mb-2 md:mb-3 bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 bg-clip-text pb-1 inline-block w-full">
@@ -65,7 +65,7 @@ const Hero = () => {
           </div>
 
           {/* Enhanced CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-5 justify-center items-center px-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4 mt-8 md:mt-10">
             <Button 
               onClick={handleContactUs}
               size="lg" 
