@@ -51,7 +51,7 @@ const Hero = () => {
             <div className="absolute -bottom-6 -right-6 w-20 h-20 md:w-24 md:h-24 border-b-4 border-r-4 border-blue-600/20 rounded-br-3xl"></div>
             
             {/* Inner container with safe padding */}
-            <div className="px-10 py-10 md:px-20 md:py-12">
+            <div className="px-12 py-10 md:px-28 md:py-12">
               {/* Headline with visual treatment */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="block text-gray-900 mb-2 md:mb-3 bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 bg-clip-text">
