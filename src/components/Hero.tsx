@@ -19,32 +19,35 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background with diagonal gray/white pattern - original design */}
-      <div className="absolute inset-0 bg-gray-100">
-        <div className="absolute inset-0 opacity-40" style={{
+      {/* Clean gradient background with subtle pattern */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100">
+        <div className="absolute inset-0 opacity-[0.25]" style={{
           backgroundImage: `repeating-linear-gradient(
             45deg,
             transparent,
-            transparent 35px,
-            rgba(200, 200, 200, 0.3) 35px,
-            rgba(200, 200, 200, 0.3) 70px
+            transparent 50px,
+            rgba(156, 163, 175, 0.15) 50px,
+            rgba(156, 163, 175, 0.15) 100px
           )`
         }}></div>
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="text-center max-w-5xl mx-auto py-20">
-          {/* Main Headline - original style */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-gray-800 leading-tight">
-            Accounting| Tax and Business Strategy
+        <div className="text-center max-w-5xl mx-auto py-24">
+          {/* Main Headline with highlighted background */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-14 leading-tight">
+            <span className="block text-gray-900 mb-3">Accounting|</span>
+            <span className="inline-block bg-gray-200/85 px-8 py-4 text-gray-900 shadow-lg">
+              Tax and Business Strategy
+            </span>
           </h1>
 
-          {/* CTA Buttons - original style */}
+          {/* CTA Buttons with clean styling */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               onClick={handleContactUs}
               size="lg" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg font-semibold rounded-none shadow-lg transition-all duration-300"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-7 text-lg font-semibold rounded-none shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-0.5"
             >
               contact us
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -53,7 +56,7 @@ const Hero = () => {
               onClick={handleScrollToServices}
               size="lg" 
               variant="outline"
-              className="border-2 border-gray-700 text-gray-700 hover:bg-gray-50 px-8 py-6 text-lg font-semibold rounded-none shadow-lg transition-all duration-300"
+              className="bg-white border-2 border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white px-10 py-7 text-lg font-semibold rounded-none shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-0.5"
             >
               our services
               <ArrowRight className="w-5 h-5 ml-2" />
