@@ -64,12 +64,6 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Descriptive text */}
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12 md:mb-16 px-4">
-            We use our broad expertise and knowledge in the finance, technology and the legal landscape 
-            to help you execute on your business strategy needs.
-          </p>
-
           {/* Enhanced CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 md:gap-5 justify-center items-center px-4">
             <Button 
