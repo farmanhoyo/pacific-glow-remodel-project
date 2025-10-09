@@ -37,8 +37,7 @@ const About = () => {
               </h2>
               
               <p className="text-xl text-gray-600 leading-relaxed">
-                As entrepreneurs we know what it takes to run a successful business. We use our broad expertise 
-                and knowledge in the finance, technology and the legal landscape to help you execute on your business strategy needs.
+                As entrepreneurs we know what it takes to run a successful business.
               </p>
             </div>
 
